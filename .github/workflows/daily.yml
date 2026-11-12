@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       START_DATE: "2026-11-16"   # scheduled runs begin on this UTC date (manual runs always go)
     steps:
@@ -29,10 +29,10 @@ jobs:
             echo "go=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         if: steps.gate.outputs.go == 'true'
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         if: steps.gate.outputs.go == 'true'
         with:
           python-version: "3.12"
