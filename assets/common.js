@@ -59,6 +59,7 @@ function parseCSV(text) {
 
 async function loadData() {
   const [h, s] = await Promise.all([fetch("data/history.csv"), fetch("data/status.json")]);
+  if (!h.ok || !s.ok) throw new Error("NOT_STARTED");
   const rows = parseCSV(await h.text());
   const status = await s.json();
   return { rows, status, dates: [...new Set(rows.map(r => r.date))].sort() };
@@ -123,6 +124,10 @@ function pearson(xs, ys) {
 
 function showError(e) {
   const m = document.querySelector("main");
+  if (e && e.message === "NOT_STARTED") {
+    m.innerHTML = `<h1>Starting soon</h1><div class="panel">Daily data collection begins <b>Monday, November 16, 2026</b> at about 7:17 a.m. Central. The first run will fill in this page.</div>`;
+    return;
+  }
   m.insertAdjacentHTML("afterbegin", `<div class="panel">Could not load the data files (${esc(e.message || e)}). If you are offline, open the site once online first.</div>`);
 }
 

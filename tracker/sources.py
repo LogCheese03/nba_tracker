@@ -108,7 +108,7 @@ def parse_espn_standings(raw: bytes) -> list[dict]:
 
 # Event slugs to try first; if none is open, the search below finds the event.
 PM_SLUGS = {
-    "title": ["nba-2026-27-champion", "nba-champion-2026-27", "2027-nba-champion", "2026-27-nba-champion"],
+    "title": ["nba-2027-champion", "nba-2026-27-champion", "nba-champion-2026-27", "2027-nba-champion", "2026-27-nba-champion"],
     "mvp": ["nba-2026-27-mvp", "nba-mvp-2026-27", "2026-27-nba-mvp", "2027-nba-mvp", "nba-mvp-2027"],
     "roy": ["nba-2026-27-rookie-of-the-year", "nba-rookie-of-the-year-2026-27", "2026-27-nba-rookie-of-the-year",
             "2027-nba-rookie-of-the-year", "nba-rookie-of-the-year-2027"],

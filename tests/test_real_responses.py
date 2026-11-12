@@ -45,3 +45,12 @@ def test_exchanges_line_up_on_the_same_players():
     pm = {r["subject"] for r in parse("polymarket_mvp")}
     ks = {r["subject"] for r in parse("kalshi_mvp")}
     assert len(pm & ks) >= 20
+
+
+def test_polymarket_title_real_maps_all_30_teams():
+    rows = parse("polymarket_title")
+    assert {r["subject"] for r in rows} == ABBRS
+    assert 90 < sum(r["prob_pct"] for r in rows) < 115
+    kalshi = {r["subject"]: r["prob_pct"] for r in parse("kalshi_title")}
+    # the two exchanges should roughly agree on every team
+    assert all(abs(r["prob_pct"] - kalshi[r["subject"]]) < 10 for r in rows)
