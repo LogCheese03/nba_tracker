@@ -17,24 +17,41 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
+    env:
+      START_DATE: "2026-11-16"   # scheduled runs begin on this UTC date (manual runs always go)
     steps:
+      - name: Check start date
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%F)" \< "$START_DATE" ]; then
+            echo "go=false" >> "$GITHUB_OUTPUT"; echo "Before $START_DATE - skipping scheduled run."
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'true'
 
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.go == 'true'
         with:
           python-version: "3.12"
 
       - run: pip install -r requirements.txt
+        if: steps.gate.outputs.go == 'true'
 
       - name: Tests
+        if: steps.gate.outputs.go == 'true'
         run: pytest -q
 
       - name: Fetch, build history, write status, post Issue
+        if: steps.gate.outputs.go == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m tracker run
 
       - name: Commit data
+        if: steps.gate.outputs.go == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
