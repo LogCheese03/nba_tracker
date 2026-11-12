@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · NBA Tracker</title>
+<meta name="theme-color" content="#f26b1d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="today">
+<main class="wrap">
+  <h1>Today</h1>
+  <p class="sub" id="runline">Loading…</p>
+
+  <div class="cards" id="cards"></div>
+
+  <h2>Sources</h2>
+  <div class="panel"><table id="sources"><thead><tr><th>Source</th><th>Status</th><th class="num">Items</th><th>Note</th></tr></thead><tbody></tbody></table></div>
+
+  <h2>Biggest moves since the previous run</h2>
+  <p class="sub" id="moveline"></p>
+  <div class="grid2" id="moves"></div>
+
+  <h2>Latest values</h2>
+  <p class="sub">Every item on the latest date, with its change since the previous run.</p>
+  <div id="latest"></div>
+</main>
+<script src="assets/common.js"></script>
+<script>
+"use strict";
+(async () => {
+  let d;
+  try { d = await loadData(); } catch (e) { showError(e); return; }
+  const { rows, status } = d;
+  const mv = computeMoves(rows);
+  const t = new Date(status.run_time);
+  document.getElementById("runline").innerHTML =
+    `Last run <b>${t.toLocaleString()}</b> (${esc(status.run_time)}). Latest data date: <b>${esc(mv.latest || "—")}</b>, compared with <b>${esc(mv.prev || "no earlier run")}</b>.`;
+
+  const ok = status.sources.filter(s => s.ok).length;
+  const cards = [
+    ["Items today", status.items], ["Days with data", status.days_with_success], ["First run", status.first_run_date || "—"],
+    ["Sources ok", `${ok}/${status.sources.length}`], ["New today", status.new_today.length], ["Gone today", status.gone_today.length],
+  ];
+  document.getElementById("cards").innerHTML = cards.map(([k, v]) => `<div class="card"><div class="k">${k}</div><div class="v">${esc(v)}</div></div>`).join("");
+
+  document.querySelector("#sources tbody").innerHTML = status.sources.map(s =>
+    `<tr><td>${esc(SOURCE_LABEL[s.name] || s.name)} <span class="muted">(${esc(s.name)})</span></td>
+     <td><span class="pill ${s.ok ? "ok" : "bad"}">${s.ok ? "ok" : "failed"}</span></td>
+     <td class="num">${s.count}</td><td class="how">${esc(s.error || "")}</td></tr>`).join("");
+
+  document.getElementById("moveline").textContent = mv.prev
+    ? "Odds: the 5 largest changes in implied probability (percentage points) per market, Polymarket and Kalshi pooled. Standings: the 5 largest changes in win %."
+    : "Moves appear after the second day of data.";
+  const groupHtml = (key) => {
+    const g = mv.groups[key], c = g.column;
+    const body = g.moves.length ? g.moves.map(m => `<tr><td>${esc(m.item)}</td><td><span class="pill m">${esc(m.source.split("_")[0])}</span></td>
+       <td class="num">${fmt(c, m.old)}</td><td class="num">${fmt(c, m.new)}</td><td class="num">${fmtChange(c, m.change)}</td></tr>`).join("")
+      : `<tr><td colspan="5" class="empty">No changes to compare yet.</td></tr>`;
+    return `<div class="panel"><h3 style="margin:0 0 8px">${MARKET_LABEL[key]}</h3><table><thead><tr><th>Item</th><th>Source</th><th class="num">Old</th><th class="num">New</th><th class="num">Change</th></tr></thead><tbody>${body}</tbody></table></div>`;
+  };
+  let movesHtml = ["title", "mvp", "roy", "standings"].map(groupHtml).join("");
+  const ng = (ids) => ids.length ? ids.map(esc).join(", ") : "none";
+  movesHtml += `<div class="panel"><h3 style="margin:0 0 8px">Appeared / disappeared</h3><p>New: ${ng(status.new_today)}</p><p>Gone: ${ng(status.gone_today)}</p></div>`;
+  document.getElementById("moves").innerHTML = movesHtml;
+
+  const latest = [...mv.now.values()];
+  const section = (market, cols) => {
+    const items = latest.filter(r => r.market === market).sort((a, b) => (b[mainValue(a)] ?? -1) - (a[mainValue(a)] ?? -1));
+    if (!items.length) return "";
+    const head = cols.map(c => `<th class="num">${LABEL[c]}</th>`).join("");
+    const body = items.map(r => {
+      const b = mv.before.get(r.item_id);
+      return `<tr><td>${esc(r.item)}</td><td>${esc(SOURCE_LABEL[r.source] || r.source)}</td>` + cols.map(c =>
+        `<td class="num">${fmt(c, r[c])} ${b && r[c] != null && b[c] != null && c !== "streak" ? fmtChange(c, r[c] - b[c]) : ""}</td>`).join("") + "</tr>";
+    }).join("");
+    return `<div class="panel"><h3 style="margin:0 0 8px">${MARKET_LABEL[market]} <span class="muted">(${items.length})</span></h3>
+      <div class="scroll"><table><thead><tr><th>Item</th><th>Source</th>${head}</tr></thead><tbody>${body}</tbody></table></div></div>`;
+  };
+  const oddsCols = ["prob_pct", "bid_pct", "ask_pct", "volume_usd", "volume_contracts"];
+  document.getElementById("latest").innerHTML =
+    section("standings", ["wins", "losses", "win_pct", "games_back", "ppg", "opp_ppg", "point_diff", "streak"]) +
+    section("title", oddsCols) + section("mvp", oddsCols) + section("roy", oddsCols);
+})();
+</script>
+</body>
+</html>

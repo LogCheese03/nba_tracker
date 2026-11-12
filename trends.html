@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trends · NBA Tracker</title>
+<meta name="theme-color" content="#f26b1d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="trends">
+<main class="wrap">
+  <h1>Trends</h1>
+  <p class="sub" id="sub">A report on the history the pipeline has built. Every number on this page is computed in your browser from <code>data/history.csv</code>, so it updates as the history grows.</p>
+
+  <div class="panel">
+    <h2 style="margin-top:0">Every value over time</h2>
+    <div class="controls">
+      <label>Market<select id="c-market"></select></label>
+      <label>Value<select id="c-col"></select></label>
+      <label>Source<select id="c-source"><option value="">Both exchanges</option></select></label>
+      <button id="c-top">Top 5</button><button id="c-none">Clear</button>
+    </div>
+    <div class="picker" id="c-items"></div>
+    <div class="chart" id="c-chart"></div>
+  </div>
+
+  <div id="findings"></div>
+</main>
+<script src="assets/common.js"></script>
+<script src="assets/charts.js"></script>
+<script>
+"use strict";
+(async () => {
+  let d;
+  try { d = await loadData(); } catch (e) { showError(e); return; }
+  const { rows, dates } = d;
+  const first = dates[0], last = dates[dates.length - 1];
+  document.getElementById("sub").insertAdjacentHTML("beforeend",
+    ` History: <b>${rows.length.toLocaleString()}</b> rows over <b>${dates.length}</b> day(s), ${esc(first || "—")} to ${esc(last || "—")}.`);
+
+  // ------------------------------------------------------------ explorer chart
+  const markets = ["standings", "title", "mvp", "roy"].filter(m => rows.some(r => r.market === m));
+  const mSel = document.getElementById("c-market"), cSel = document.getElementById("c-col"), sSel = document.getElementById("c-source");
+  mSel.innerHTML = markets.map(m => `<option value="${m}">${MARKET_LABEL[m]}</option>`).join("");
+  sSel.insertAdjacentHTML("beforeend", `<option value="polymarket">Polymarket</option><option value="kalshi">Kalshi</option>`);
+  let chosen = new Set();
+
+  function itemsFor() {
+    const m = mSel.value, src = sSel.value;
+    const latest = new Map();
+    rows.forEach(r => { if (r.market === m && (!src || r.source.startsWith(src) || m === "standings")) latest.set(r.item_id, r); });
+    return [...latest.values()].sort((a, b) => (b[mainValue(b)] ?? -1) - (a[mainValue(a)] ?? -1));
+  }
+  function setCols() {
+    const m = mSel.value, have = NUMERIC.filter(c => rows.some(r => r.market === m && r[c] != null));
+    cSel.innerHTML = have.map(c => `<option value="${c}">${LABEL[c]}</option>`).join("");
+    cSel.value = m === "standings" ? "win_pct" : "prob_pct";
+    sSel.disabled = m === "standings";
+  }
+  function topFive() { chosen = new Set(itemsFor().slice(0, 5).map(r => r.item_id)); }
+  function drawPicker() {
+    document.getElementById("c-items").innerHTML = itemsFor().map(r =>
+      `<label><input type="checkbox" value="${esc(r.item_id)}" ${chosen.has(r.item_id) ? "checked" : ""}>${esc(r.item)}${r.market === "standings" ? "" : " · " + esc(r.source.split("_")[0])}</label>`).join("");
+  }
+  function drawChart() {
+    const col = cSel.value;
+    const series = [...chosen].map(id => {
+      const pts = rows.filter(r => r.item_id === id).map(r => ({ x: r.date, y: r[col] }));
+      const r0 = rows.find(r => r.item_id === id);
+      return { name: r0 ? r0.item + (r0.market === "standings" ? "" : ` (${r0.source.split("_")[0]})`) : id, points: pts };
+    }).filter(s => s.points.length);
+    lineChart(document.getElementById("c-chart"), series, { yLabel: LABEL[col] });
+  }
+  mSel.onchange = () => { setCols(); topFive(); drawPicker(); drawChart(); };
+  sSel.onchange = () => { topFive(); drawPicker(); drawChart(); };
+  cSel.onchange = drawChart;
+  document.getElementById("c-items").onchange = e => { e.target.checked ? chosen.add(e.target.value) : chosen.delete(e.target.value); drawChart(); };
+  document.getElementById("c-top").onclick = () => { topFive(); drawPicker(); drawChart(); };
+  document.getElementById("c-none").onclick = () => { chosen.clear(); drawPicker(); drawChart(); };
+  mSel.value = markets.includes("title") ? "title" : markets[0];
+  setCols(); topFive(); drawPicker(); drawChart();
+
+  // ---------------------------------------------------------------- helpers
+  // consensus[market][date][subject] = mean prob_pct over the exchanges that reported it
+  const consensus = {}, names = {};
+  for (const m of ODDS_MARKETS) {
+    const acc = {};
+    rows.filter(r => r.market === m && r.prob_pct != null).forEach(r => {
+      ((acc[r.date] ??= {})[r.subject] ??= []).push(r.prob_pct);
+      names[m + ":" + r.subject] = r.item;
+    });
+    consensus[m] = {};
+    for (const [dt, subs] of Object.entries(acc)) {
+      consensus[m][dt] = {};
+      for (const [s, v] of Object.entries(subs)) consensus[m][dt][s] = mean(v);
+    }
+  }
+  const odDates = m => Object.keys(consensus[m] || {}).sort();
+  const nm = (m, s) => names[m + ":" + s] || s;
+  const pts = v => (v >= 0 ? "+" : "") + v.toFixed(1) + " pts";
+  const F = document.getElementById("findings");
+  let n = 0;
+  function finding(title, text, how, draw) {
+    n++;
+    F.insertAdjacentHTML("beforeend", `<section class="finding"><h2>${n}. ${title}</h2><p>${text}</p><p class="how"><b>How it's computed:</b> ${how}</p><div class="chart" id="f${n}"></div></section>`);
+    draw(document.getElementById("f" + n));
+  }
+
+  // ------------------------------------------------- 1. title odds since first run
+  {
+    const ds = odDates("title"), a = ds[0], b = ds[ds.length - 1];
+    const ch = a ? Object.keys(consensus.title[b]).filter(s => consensus.title[a][s] != null)
+      .map(s => ({ s, from: consensus.title[a][s], to: consensus.title[b][s], d: consensus.title[b][s] - consensus.title[a][s] }))
+      .sort((x, y) => y.d - x.d) : [];
+    const lead = ch.length ? [...ch].sort((x, y) => y.to - x.to)[0] : null;
+    let title, text;
+    if (!ch.length) { title = "No title odds yet"; text = "Title odds appear after the first successful run."; }
+    else if (ds.length < 2 || ch.every(c => Math.abs(c.d) < 0.05)) {
+      title = `${esc(nm("title", lead.s))} are the title favorite at ${lead.to.toFixed(1)}%`;
+      text = `With only ${ds.length} day(s) of odds there are no changes yet. Right now the markets give ${esc(nm("title", lead.s))} a ${lead.to.toFixed(1)}% chance to win the championship; the chart shows each team's change since ${a}, which will fill in as days are added.`;
+    } else {
+      const up = ch[0], dn = ch[ch.length - 1];
+      title = `${esc(nm("title", up.s))} gained the most title odds since ${a} (${pts(up.d)})`;
+      text = `${esc(nm("title", up.s))} went from ${up.from.toFixed(1)}% to ${up.to.toFixed(1)}%. The biggest drop was ${esc(nm("title", dn.s))}, from ${dn.from.toFixed(1)}% to ${dn.to.toFixed(1)}% (${pts(dn.d)}). ${esc(nm("title", lead.s))} remain the favorite at ${lead.to.toFixed(1)}%.`;
+    }
+    finding(title, text, `For each team and day, the title probability is the average of Polymarket and Kalshi <code>prob_pct</code> (whichever reported that day). The change is the latest day (${esc(b || "—")}) minus the first day (${esc(a || "—")}), in percentage points.`,
+      el => barChart(el, ch.map(c => ({ label: nm("title", c.s), value: +c.d.toFixed(2) })), { unit: " pts" }));
+  }
+
+  // ------------------------------------------------- 2. where the exchanges disagree
+  {
+    const gaps = [];
+    for (const m of ODDS_MARKETS) {
+      const ld = rows.filter(r => r.market === m).map(r => r.date).sort().pop();
+      const pm = new Map(rows.filter(r => r.date === ld && r.source === `polymarket_${m}` && r.prob_pct != null).map(r => [r.subject, r]));
+      rows.filter(r => r.date === ld && r.source === `kalshi_${m}` && r.prob_pct != null).forEach(k => {
+        const p = pm.get(k.subject);
+        if (p) gaps.push({ m, s: k.subject, item: k.item, pm: p.prob_pct, ks: k.prob_pct, gap: p.prob_pct - k.prob_pct });
+      });
+    }
+    gaps.sort((a, b) => Math.abs(b.gap) - Math.abs(a.gap));
+    const avg = m => mean(gaps.filter(g => g.m === m).map(g => Math.abs(g.gap)));
+    const big = gaps[0];
+    const avgTxt = ODDS_MARKETS.filter(m => avg(m) != null).map(m => `${MARKET_LABEL[m].replace(" odds", "")} ${avg(m).toFixed(2)} pts (${gaps.filter(g => g.m === m).length} matched)`).join(", ");
+    finding(big ? `Polymarket and Kalshi disagree most on ${esc(big.item)} (${Math.abs(big.gap).toFixed(1)} pts apart)` : "No item is priced on both exchanges yet",
+      big ? `On the latest day, Polymarket prices ${esc(big.item)} (${MARKET_LABEL[big.m]}) at ${big.pm.toFixed(1)}% and Kalshi at ${big.ks.toFixed(1)}%. Across everything listed on both exchanges, the average gap is: ${avgTxt}. Small gaps mean the two markets agree; a big gap is where one exchange is more bullish.` : "This section compares the two exchanges once both report the same team or player.",
+      "For each market, take the latest date, match Polymarket and Kalshi rows by <code>subject</code> (team abbreviation or player slug), and subtract: gap = Polymarket <code>prob_pct</code> − Kalshi <code>prob_pct</code>. The chart shows the 12 largest gaps; orange means Polymarket is higher.",
+      el => barChart(el, gaps.slice(0, 12).map(g => ({ label: `${g.item} (${g.m.toUpperCase()})`, value: +g.gap.toFixed(2) })), { unit: " pts" }));
+  }
+
+  // ------------------------------------------------- 3 & 4. award races
+  for (const [m, label] of [["mvp", "MVP"], ["roy", "Rookie of the Year"]]) {
+    const ds = odDates(m), a = ds[0], b = ds[ds.length - 1];
+    if (!b) { finding(`No ${label} odds yet`, `The ${label} race appears after the first successful run.`, "—", el => el.innerHTML = ""); continue; }
+    const now = Object.entries(consensus[m][b]).sort((x, y) => y[1] - x[1]);
+    const top = now.slice(0, 5).map(([s]) => s);
+    const [ls, lv] = now[0], second = now[1];
+    const was = consensus[m][a][ls];
+    const firstLead = Object.entries(consensus[m][a]).sort((x, y) => y[1] - x[1])[0];
+    const changed = firstLead && firstLead[0] !== ls;
+    finding(`${esc(nm(m, ls))} leads the ${label} race at ${lv.toFixed(1)}%`,
+      `${esc(nm(m, ls))} has a ${lv.toFixed(1)}% chance${second ? `, ahead of ${esc(nm(m, second[0]))} at ${second[1].toFixed(1)}% (a ${(lv - second[1]).toFixed(1)}-point lead)` : ""}. ` +
+      (ds.length > 1 ? (was != null ? `Since ${a}, the leader's odds moved ${pts(lv - was)}. ` : "") + (changed ? `The leader has changed: on ${a} it was ${esc(nm(m, firstLead[0]))}.` : `The leader is the same as on ${a}.`) : `This is the first day of ${label} odds; the lines grow as days are added.`) +
+      ` ${now.length} candidates are priced.`,
+      `For each player and day, the ${label} probability is the average of Polymarket and Kalshi <code>prob_pct</code>. The chart follows today's top 5 across every day of the history.`,
+      el => lineChart(el, top.map(s => ({ name: nm(m, s), points: ds.map(dt => ({ x: dt, y: consensus[m][dt][s] ?? null })) })), { yLabel: "Implied prob %" }));
+  }
+
+  // ------------------------------------------------- 5. win % vs title odds
+  {
+    const ld = rows.filter(r => r.source === "espn_standings").map(r => r.date).sort().pop();
+    const td = odDates("title").filter(x => x <= (ld || "")).pop();
+    const st = rows.filter(r => r.date === ld && r.source === "espn_standings" && r.win_pct != null);
+    const p = st.filter(r => consensus.title[td]?.[r.subject] != null).map(r => ({ x: r.win_pct, y: consensus.title[td][r.subject], label: r.item, short: r.subject, pd: r.point_diff }));
+    const r = pearson(p.map(q => q.x), p.map(q => q.y));
+    const rpd = pearson(p.filter(q => q.pd != null).map(q => q.pd), p.filter(q => q.pd != null).map(q => q.y));
+    const word = r == null ? "" : r > 0.7 ? "closely" : r > 0.4 ? "moderately" : "only loosely";
+    const best = [...p].sort((a, b) => b.x - a.x)[0];
+    const fav = [...p].sort((a, b) => b.y - a.y)[0];
+    finding(r == null ? "Win % vs title odds needs more teams" : `Title odds track win % ${word} (r = ${r.toFixed(2)})`,
+      r == null ? "This needs standings and title odds for at least three teams on the same day." :
+        `Across ${p.length} teams on ${ld}, the correlation between win % and title odds is ${r.toFixed(2)}${rpd != null ? `, and between point differential and title odds it is ${rpd.toFixed(2)}` : ""}. ` +
+        `The best record belongs to ${esc(best.label)} (${best.x.toFixed(3)}), while the market favorite is ${esc(fav.label)} (${fav.y.toFixed(1)}%)` + (best.short === fav.short ? " — the same team." : ", so the markets are pricing more than the current record."),
+      "Join the latest ESPN standings row for each team to that day's average title probability by team abbreviation, then compute the Pearson correlation of <code>win_pct</code> with title <code>prob_pct</code> (and of <code>point_diff</code> with title odds).",
+      el => scatterChart(el, p, { xLabel: "Win %", yLabel: "Title odds %" }));
+  }
+
+  // ------------------------------------------------- 6. biggest day of movement
+  {
+    const byDate = new Map();
+    rows.filter(r => r.prob_pct != null).forEach(r => (byDate.get(r.date) ?? byDate.set(r.date, new Map()).get(r.date)).set(r.item_id, r.prob_pct));
+    const ds = [...byDate.keys()].sort(), days = [];
+    for (let i = 1; i < ds.length; i++) {
+      let tot = 0, cnt = 0;
+      for (const [id, v] of byDate.get(ds[i])) { const o = byDate.get(ds[i - 1]).get(id); if (o != null) { tot += Math.abs(v - o); cnt++; } }
+      days.push({ date: ds[i], tot, cnt });
+    }
+    const big = [...days].sort((a, b) => b.tot - a.tot)[0];
+    finding(big ? `${big.date} was the biggest day of movement (${big.tot.toFixed(1)} pts in total)` : "The biggest day of movement needs two days of odds",
+      big ? `On ${big.date}, the ${big.cnt} odds items priced on both that day and the day before moved a combined ${big.tot.toFixed(1)} percentage points. The average day so far moved ${mean(days.map(x => x.tot)).toFixed(1)} points across ${days.length} day-to-day comparisons.` : "After the second daily run, this section compares each day's odds with the day before.",
+      "For each date after the first, sum |<code>prob_pct</code> today − <code>prob_pct</code> previous day| over every odds item (both exchanges, all three markets) that appears on both days.",
+      el => barChart(el, days.map(x => ({ label: x.date, value: +x.tot.toFixed(2) })), { unit: " pts" }));
+  }
+
+  // ------------------------------------------------- 7. how far apart the teams are
+  {
+    const ld = rows.filter(r => r.source === "espn_standings").map(r => r.date).sort().pop();
+    const st = rows.filter(r => r.date === ld && r.source === "espn_standings" && r.point_diff != null).sort((a, b) => b.point_diff - a.point_diff);
+    if (st.length) {
+      const hi = st[0], lo = st[st.length - 1];
+      const east = mean(st.filter(r => r.conference === "East").map(r => r.point_diff)), west = mean(st.filter(r => r.conference === "West").map(r => r.point_diff));
+      finding(`${esc(hi.item)} and ${esc(lo.item)} are ${(hi.point_diff - lo.point_diff).toFixed(1)} points per game apart`,
+        `${esc(hi.item)} outscore opponents by ${hi.point_diff.toFixed(1)} per game; ${esc(lo.item)} are at ${lo.point_diff.toFixed(1)}. ` +
+        (east != null && west != null ? `The average point differential is ${east.toFixed(2)} in the East and ${west.toFixed(2)} in the West.` : ""),
+        `From the latest ESPN standings (${esc(ld)}): <code>point_diff</code> = <code>ppg</code> − <code>opp_ppg</code>; the spread is the best minus the worst, and the conference averages are the mean <code>point_diff</code> of each conference's teams. Blue bars are East, orange are West.`,
+        el => barChart(el, st.map(r => ({ label: r.item, value: r.point_diff, color: r.conference === "East" ? "#4ea8ff" : "#f26b1d" }))));
+    }
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browse · NBA Tracker</title>
+<meta name="theme-color" content="#f26b1d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="browse">
+<main class="wrap">
+  <h1>Browse</h1>
+  <p class="sub" id="sub">Latest values for every item. Click a column heading to sort; click ★ to add an item to your shortlist (saved in this browser).</p>
+
+  <div class="controls">
+    <label>Search names<input id="q" type="search" placeholder="e.g. Thunder, Jokić"></label>
+    <label>Market<select id="f-market"><option value="">All</option></select></label>
+    <label>Source<select id="f-source"><option value="">All</option></select></label>
+    <label>Conference<select id="f-conf"><option value="">All</option><option>East</option><option>West</option></select></label>
+    <label>Show<select id="f-star"><option value="">Everything</option><option value="1">Shortlist only</option></select></label>
+    <button id="clear">Reset</button>
+  </div>
+
+  <div class="panel">
+    <h3 style="margin:0 0 6px">★ Shortlist <span class="muted" id="starcount"></span></h3>
+    <div id="shortlist" class="how"></div>
+  </div>
+
+  <div class="panel scroll"><table id="t"><thead></thead><tbody></tbody></table></div>
+</main>
+<script src="assets/common.js"></script>
+<script>
+"use strict";
+(async () => {
+  let d;
+  try { d = await loadData(); } catch (e) { showError(e); return; }
+  const mv = computeMoves(d.rows);
+  const items = [...mv.now.values()];
+  const cols = NUMERIC.filter(c => items.some(r => r[c] != null));
+  let stars = getStars();
+  let sort = { col: null, dir: -1 };
+
+  const fill = (id, vals, labels) => {
+    document.getElementById(id).insertAdjacentHTML("beforeend", vals.map(v => `<option value="${esc(v)}">${esc(labels[v] || v)}</option>`).join(""));
+  };
+  fill("f-market", [...new Set(items.map(r => r.market))].sort(), MARKET_LABEL);
+  fill("f-source", [...new Set(items.map(r => r.source))].sort(), SOURCE_LABEL);
+  document.getElementById("sub").insertAdjacentText("beforeend", ` Data date: ${mv.latest || "—"}.`);
+
+  const head = document.querySelector("#t thead");
+  head.innerHTML = `<tr><th></th><th>Item</th><th>Market</th><th>Source</th><th>Conf</th>${cols.map(c =>
+    `<th class="num sortable" data-col="${c}">${LABEL[c]} <span class="arrow"></span></th>`).join("")}</tr>`;
+  head.addEventListener("click", e => {
+    const th = e.target.closest("th[data-col]"); if (!th) return;
+    const c = th.dataset.col;
+    sort = sort.col === c ? { col: c, dir: -sort.dir } : { col: c, dir: -1 };
+    draw();
+  });
+
+  const val = id => document.getElementById(id).value;
+  ["q", "f-market", "f-source", "f-conf", "f-star"].forEach(id => document.getElementById(id).addEventListener("input", draw));
+  document.getElementById("clear").onclick = () => {
+    ["q", "f-market", "f-source", "f-conf", "f-star"].forEach(id => document.getElementById(id).value = "");
+    sort = { col: null, dir: -1 }; draw();
+  };
+  document.querySelector("#t tbody").addEventListener("click", e => {
+    const b = e.target.closest(".star"); if (!b) return;
+    const id = b.dataset.id;
+    stars.has(id) ? stars.delete(id) : stars.add(id);
+    setStars(stars); draw();
+  });
+
+  function draw() {
+    const q = val("q").trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    let list = items.filter(r =>
+      (!q || r.item.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").includes(q)) &&
+      (!val("f-market") || r.market === val("f-market")) &&
+      (!val("f-source") || r.source === val("f-source")) &&
+      (!val("f-conf") || r.conference === val("f-conf")) &&
+      (!val("f-star") || stars.has(r.item_id)));
+    if (sort.col) {
+      list.sort((a, b) => {
+        const x = a[sort.col], y = b[sort.col];
+        if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1;
+        return (x - y) * -sort.dir;
+      });
+    } else {
+      list.sort((a, b) => a.market.localeCompare(b.market) || (b[mainValue(b)] ?? -1) - (a[mainValue(a)] ?? -1));
+    }
+    head.querySelectorAll("th[data-col] .arrow").forEach(s => {
+      s.textContent = s.parentElement.dataset.col === sort.col ? (sort.dir < 0 ? "▼" : "▲") : "";
+    });
+    document.querySelector("#t tbody").innerHTML = list.map(r => `<tr>
+      <td><button class="star ${stars.has(r.item_id) ? "on" : ""}" data-id="${esc(r.item_id)}" title="Shortlist">★</button></td>
+      <td>${esc(r.item)}</td><td><span class="pill m">${esc(MARKET_LABEL[r.market] || r.market)}</span></td>
+      <td>${esc(SOURCE_LABEL[r.source] || r.source)}</td><td>${esc(r.conference || "")}</td>
+      ${cols.map(c => `<td class="num">${fmt(c, r[c])}</td>`).join("")}</tr>`).join("")
+      || `<tr><td colspan="${cols.length + 5}" class="empty">Nothing matches.</td></tr>`;
+    const starred = items.filter(r => stars.has(r.item_id));
+    document.getElementById("starcount").textContent = `(${starred.length})`;
+    document.getElementById("shortlist").innerHTML = starred.length
+      ? starred.map(r => `${esc(r.item)} <span class="muted">· ${esc(SOURCE_LABEL[r.source] || r.source)} · ${fmt(mainValue(r), r[mainValue(r)])}</span>`).join("<br>")
+      : "No items starred yet.";
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
