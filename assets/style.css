@@ -61,7 +61,7 @@ th.sortable { cursor: pointer; user-select: none; }
 th.sortable:hover { color: var(--text); }
 .star { cursor: pointer; background: none; border: none; font-size: 18px; color: var(--line); padding: 0 4px; }
 .star.on { color: #ffcc33; }
-.picker { display: flex; flex-wrap: wrap; gap: 6px; max-height: 120px; overflow: auto; padding: 6px; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; }
+.picker { margin-bottom: 10px; display: flex; flex-wrap: wrap; gap: 6px; max-height: 120px; overflow: auto; padding: 6px; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; }
 .picker label { flex-direction: row; align-items: center; gap: 4px; color: var(--text); font-size: 13px; background: var(--panel-2); padding: 2px 8px; border-radius: 999px; }
 .chart svg { width: 100%; height: auto; display: block; }
 .chart .axis text { fill: var(--muted); font-size: 11px; }

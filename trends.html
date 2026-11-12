@@ -119,14 +119,16 @@
     if (!ch.length) { title = "No title odds yet"; text = "Title odds appear after the first successful run."; }
     else if (ds.length < 2 || ch.every(c => Math.abs(c.d) < 0.05)) {
       title = `${esc(nm("title", lead.s))} are the title favorite at ${lead.to.toFixed(1)}%`;
-      text = `With only ${ds.length} day(s) of odds there are no changes yet. Right now the markets give ${esc(nm("title", lead.s))} a ${lead.to.toFixed(1)}% chance to win the championship; the chart shows each team's change since ${a}, which will fill in as days are added.`;
+      text = `With only ${ds.length} day(s) of odds there are no changes yet. Right now the markets give ${esc(nm("title", lead.s))} a ${lead.to.toFixed(1)}% chance to win the championship; the chart shows each team's current title odds; from the second day on it shows each team's change since ${a}.`;
     } else {
       const up = ch[0], dn = ch[ch.length - 1];
       title = `${esc(nm("title", up.s))} gained the most title odds since ${a} (${pts(up.d)})`;
       text = `${esc(nm("title", up.s))} went from ${up.from.toFixed(1)}% to ${up.to.toFixed(1)}%. The biggest drop was ${esc(nm("title", dn.s))}, from ${dn.from.toFixed(1)}% to ${dn.to.toFixed(1)}% (${pts(dn.d)}). ${esc(nm("title", lead.s))} remain the favorite at ${lead.to.toFixed(1)}%.`;
     }
     finding(title, text, `For each team and day, the title probability is the average of Polymarket and Kalshi <code>prob_pct</code> (whichever reported that day). The change is the latest day (${esc(b || "—")}) minus the first day (${esc(a || "—")}), in percentage points.`,
-      el => barChart(el, ch.map(c => ({ label: nm("title", c.s), value: +c.d.toFixed(2) })), { unit: " pts" }));
+      el => ds.length < 2
+        ? barChart(el, [...ch].sort((x, y) => y.to - x.to).map(c => ({ label: nm("title", c.s), value: +c.to.toFixed(2) })), { unit: "%" })
+        : barChart(el, ch.map(c => ({ label: nm("title", c.s), value: +c.d.toFixed(2) })), { unit: " pts" }));
   }
 
   // ------------------------------------------------- 2. where the exchanges disagree
