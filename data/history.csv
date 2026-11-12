@@ -1,34 +1,34 @@
 date,item_id,item,source,market,subject,team,conference,wins,losses,win_pct,games_back,ppg,opp_ppg,point_diff,streak,prob_pct,bid_pct,ask_pct,last_pct,volume_usd,liquidity_usd,volume_contracts,open_interest
-2026-11-12,espn_standings:ATL,Atlanta Hawks,espn_standings,standings,ATL,ATL,East,7,5,0.5833,3,118.25,116.1667,2.1,-1,,,,,,,,
-2026-11-12,espn_standings:BKN,Brooklyn Nets,espn_standings,standings,BKN,BKN,East,3,8,0.2727,6.5,110.1818,115.2727,-5.1,1,,,,,,,,
-2026-11-12,espn_standings:BOS,Boston Celtics,espn_standings,standings,BOS,BOS,East,10,2,0.8333,0,114.25,103.0833,11.2,5,,,,,,,,
-2026-11-12,espn_standings:CHA,Charlotte Hornets,espn_standings,standings,CHA,CHA,East,4,7,0.3636,5.5,98.8182,110.3636,-11.6,1,,,,,,,,
+2026-11-12,espn_standings:ATL,Atlanta Hawks,espn_standings,standings,ATL,ATL,East,7,5,0.5833,3,118.25,116.1667,2.0833,-1,,,,,,,,
+2026-11-12,espn_standings:BKN,Brooklyn Nets,espn_standings,standings,BKN,BKN,East,3,8,0.2727,6.5,110.1818,115.2727,-5.0909,1,,,,,,,,
+2026-11-12,espn_standings:BOS,Boston Celtics,espn_standings,standings,BOS,BOS,East,10,2,0.8333,0,114.25,103.0833,11.1667,5,,,,,,,,
+2026-11-12,espn_standings:CHA,Charlotte Hornets,espn_standings,standings,CHA,CHA,East,4,7,0.3636,5.5,98.8182,110.3636,-11.5455,1,,,,,,,,
 2026-11-12,espn_standings:CHI,Chicago Bulls,espn_standings,standings,CHI,CHI,East,1,9,0.1,8,113.3,128.8,-15.5,-8,,,,,,,,
-2026-11-12,espn_standings:CLE,Cleveland Cavaliers,espn_standings,standings,CLE,CLE,East,6,6,0.5,4,116.4167,114.3333,2.1,1,,,,,,,,
-2026-11-12,espn_standings:DAL,Dallas Mavericks,espn_standings,standings,DAL,DAL,West,7,4,0.6364,3,114.9091,110.2727,4.6,3,,,,,,,,
+2026-11-12,espn_standings:CLE,Cleveland Cavaliers,espn_standings,standings,CLE,CLE,East,6,6,0.5,4,116.4167,114.3333,2.0833,1,,,,,,,,
+2026-11-12,espn_standings:DAL,Dallas Mavericks,espn_standings,standings,DAL,DAL,West,7,4,0.6364,3,114.9091,110.2727,4.6364,3,,,,,,,,
 2026-11-12,espn_standings:DEN,Denver Nuggets,espn_standings,standings,DEN,DEN,West,6,4,0.6,3.5,114.5,113.3,1.2,1,,,,,,,,
 2026-11-12,espn_standings:DET,Detroit Pistons,espn_standings,standings,DET,DET,East,7,3,0.7,2,112.7,104.6,8.1,1,,,,,,,,
-2026-11-12,espn_standings:GS,Golden State Warriors,espn_standings,standings,GS,GS,West,8,4,0.6667,2.5,119.3333,111.5,7.8,-1,,,,,,,,
-2026-11-12,espn_standings:HOU,Houston Rockets,espn_standings,standings,HOU,HOU,West,9,3,0.75,1.5,115.4167,106.5,8.9,2,,,,,,,,
-2026-11-12,espn_standings:IND,Indiana Pacers,espn_standings,standings,IND,IND,East,4,8,0.3333,6,111.5833,114,-2.4,1,,,,,,,,
+2026-11-12,espn_standings:GS,Golden State Warriors,espn_standings,standings,GS,GS,West,8,4,0.6667,2.5,119.3333,111.5,7.8333,-1,,,,,,,,
+2026-11-12,espn_standings:HOU,Houston Rockets,espn_standings,standings,HOU,HOU,West,9,3,0.75,1.5,115.4167,106.5,8.9167,2,,,,,,,,
+2026-11-12,espn_standings:IND,Indiana Pacers,espn_standings,standings,IND,IND,East,4,8,0.3333,6,111.5833,114,-2.4167,1,,,,,,,,
 2026-11-12,espn_standings:LAC,LA Clippers,espn_standings,standings,LAC,LAC,West,2,8,0.2,7.5,112.2,118.1,-5.9,-1,,,,,,,,
-2026-11-12,espn_standings:LAL,Los Angeles Lakers,espn_standings,standings,LAL,LAL,West,11,2,0.8462,0,122.1539,114.2308,8,7,,,,,,,,
+2026-11-12,espn_standings:LAL,Los Angeles Lakers,espn_standings,standings,LAL,LAL,West,11,2,0.8462,0,122.1539,114.2308,7.9231,7,,,,,,,,
 2026-11-12,espn_standings:MEM,Memphis Grizzlies,espn_standings,standings,MEM,MEM,West,7,4,0.6364,3,117.9091,111.9091,6,-1,,,,,,,,
-2026-11-12,espn_standings:MIA,Miami Heat,espn_standings,standings,MIA,MIA,East,5,6,0.4545,4.5,115.7273,120,-4.3,2,,,,,,,,
-2026-11-12,espn_standings:MIL,Milwaukee Bucks,espn_standings,standings,MIL,MIL,East,1,11,0.0833,9,106.75,121.3333,-14.5,-8,,,,,,,,
-2026-11-12,espn_standings:MIN,Minnesota Timberwolves,espn_standings,standings,MIN,MIN,West,8,3,0.7273,2,118.0909,107,11.1,4,,,,,,,,
-2026-11-12,espn_standings:NO,New Orleans Pelicans,espn_standings,standings,NO,NO,West,4,8,0.3333,6.5,116.9167,124.25,-7.4,-4,,,,,,,,
-2026-11-12,espn_standings:NY,New York Knicks,espn_standings,standings,NY,NY,East,6,5,0.5455,3.5,110.2727,103.4545,6.8,-1,,,,,,,,
-2026-11-12,espn_standings:OKC,Oklahoma City Thunder,espn_standings,standings,OKC,OKC,West,8,4,0.6667,2.5,111.0833,106.9167,4.2,-2,,,,,,,,
-2026-11-12,espn_standings:ORL,Orlando Magic,espn_standings,standings,ORL,ORL,East,4,7,0.3636,5.5,108.4545,114,-5.5,2,,,,,,,,
+2026-11-12,espn_standings:MIA,Miami Heat,espn_standings,standings,MIA,MIA,East,5,6,0.4545,4.5,115.7273,120,-4.2727,2,,,,,,,,
+2026-11-12,espn_standings:MIL,Milwaukee Bucks,espn_standings,standings,MIL,MIL,East,1,11,0.0833,9,106.75,121.3333,-14.5833,-8,,,,,,,,
+2026-11-12,espn_standings:MIN,Minnesota Timberwolves,espn_standings,standings,MIN,MIN,West,8,3,0.7273,2,118.0909,107,11.0909,4,,,,,,,,
+2026-11-12,espn_standings:NO,New Orleans Pelicans,espn_standings,standings,NO,NO,West,4,8,0.3333,6.5,116.9167,124.25,-7.3333,-4,,,,,,,,
+2026-11-12,espn_standings:NY,New York Knicks,espn_standings,standings,NY,NY,East,6,5,0.5455,3.5,110.2727,103.4545,6.8182,-1,,,,,,,,
+2026-11-12,espn_standings:OKC,Oklahoma City Thunder,espn_standings,standings,OKC,OKC,West,8,4,0.6667,2.5,111.0833,106.9167,4.1667,-2,,,,,,,,
+2026-11-12,espn_standings:ORL,Orlando Magic,espn_standings,standings,ORL,ORL,East,4,7,0.3636,5.5,108.4545,114,-5.5455,2,,,,,,,,
 2026-11-12,espn_standings:PHI,Philadelphia 76ers,espn_standings,standings,PHI,PHI,East,9,3,0.75,1,110.1667,109.1667,1,-1,,,,,,,,
 2026-11-12,espn_standings:PHX,Phoenix Suns,espn_standings,standings,PHX,PHX,West,4,6,0.4,5.5,112.8,118.1,-5.3,1,,,,,,,,
-2026-11-12,espn_standings:POR,Portland Trail Blazers,espn_standings,standings,POR,POR,West,8,3,0.7273,2,119.5455,112.2727,7.2,2,,,,,,,,
-2026-11-12,espn_standings:SA,San Antonio Spurs,espn_standings,standings,SA,SA,West,10,2,0.8333,0.5,119.1667,108,11.2,10,,,,,,,,
-2026-11-12,espn_standings:SAC,Sacramento Kings,espn_standings,standings,SAC,SAC,West,1,10,0.0909,9,108.2727,121,-12.7,-4,,,,,,,,
-2026-11-12,espn_standings:TOR,Toronto Raptors,espn_standings,standings,TOR,TOR,East,5,6,0.4545,4.5,114.4545,111.9091,2.6,-2,,,,,,,,
+2026-11-12,espn_standings:POR,Portland Trail Blazers,espn_standings,standings,POR,POR,West,8,3,0.7273,2,119.5455,112.2727,7.2727,2,,,,,,,,
+2026-11-12,espn_standings:SA,San Antonio Spurs,espn_standings,standings,SA,SA,West,10,2,0.8333,0.5,119.1667,108,11.1667,10,,,,,,,,
+2026-11-12,espn_standings:SAC,Sacramento Kings,espn_standings,standings,SAC,SAC,West,1,10,0.0909,9,108.2727,121,-12.7273,-4,,,,,,,,
+2026-11-12,espn_standings:TOR,Toronto Raptors,espn_standings,standings,TOR,TOR,East,5,6,0.4545,4.5,114.4545,111.9091,2.5455,-2,,,,,,,,
 2026-11-12,espn_standings:UTAH,Utah Jazz,espn_standings,standings,UTAH,UTAH,West,1,11,0.0833,9.5,106.5833,118.0833,-11.5,-10,,,,,,,,
-2026-11-12,espn_standings:WSH,Washington Wizards,espn_standings,standings,WSH,WSH,East,4,8,0.3333,6,107.5,113.4167,-5.9,-5,,,,,,,,
+2026-11-12,espn_standings:WSH,Washington Wizards,espn_standings,standings,WSH,WSH,East,4,8,0.3333,6,107.5,113.4167,-5.9167,-5,,,,,,,,
 2026-11-12,kalshi_mvp:alperen-sengun,Alperen Sengun,kalshi_mvp,mvp,alperen-sengun,,,,,,,,,,,1,0,1,1,,,197727.11,197584.45
 2026-11-12,kalshi_mvp:amen-thompson,Amen Thompson,kalshi_mvp,mvp,amen-thompson,,,,,,,,,,,1,0,1,1,,,3200.87,3200.87
 2026-11-12,kalshi_mvp:anthony-davis,Anthony Davis,kalshi_mvp,mvp,anthony-davis,,,,,,,,,,,1,0,1,1,,,27377.48,27377.48
@@ -75,7 +75,6 @@ date,item_id,item,source,market,subject,team,conference,wins,losses,win_pct,game
 2026-11-12,kalshi_mvp:shai-gilgeous-alexander,Shai Gilgeous-Alexander,kalshi_mvp,mvp,shai-gilgeous-alexander,,,,,,,,,,,9.5,9,10,10,,,371524.66,328890.79
 2026-11-12,kalshi_mvp:stephen-curry,Stephen Curry,kalshi_mvp,mvp,stephen-curry,,,,,,,,,,,1,0,1,1,,,608500.47,508669.99
 2026-11-12,kalshi_mvp:stephon-castle,Stephon Castle,kalshi_mvp,mvp,stephon-castle,,,,,,,,,,,1,0,1,1,,,175.66,175.66
-2026-11-12,kalshi_mvp:tie-co-winners,Tie/Co-Winners,kalshi_mvp,mvp,tie-co-winners,,,,,,,,,,,1,0,1,1,,,9812.31,9812.31
 2026-11-12,kalshi_mvp:trae-young,Trae Young,kalshi_mvp,mvp,trae-young,,,,,,,,,,,1,0,1,1,,,13684.44,13684.44
 2026-11-12,kalshi_mvp:tyler-herro,Tyler Herro,kalshi_mvp,mvp,tyler-herro,,,,,,,,,,,1,0,1,1,,,269.17,175.66
 2026-11-12,kalshi_mvp:tyrese-haliburton,Tyrese Haliburton,kalshi_mvp,mvp,tyrese-haliburton,,,,,,,,,,,1,0,1,1,,,205013.65,204567.99
@@ -99,7 +98,6 @@ date,item_id,item,source,market,subject,team,conference,wins,losses,win_pct,game
 2026-11-12,kalshi_roy:morez-johnson-jr,Morez Johnson Jr.,kalshi_roy,roy,morez-johnson-jr,,,,,,,,,,,1,0,1,1,,,17158.99,16545.22
 2026-11-12,kalshi_roy:nate-ament,Nate Ament,kalshi_roy,roy,nate-ament,,,,,,,,,,,1,0,1,1,,,2556.73,2548.73
 2026-11-12,kalshi_roy:ryan-conwell,Ryan Conwell,kalshi_roy,roy,ryan-conwell,,,,,,,,,,,1,0,1,1,,,467.58,467.58
-2026-11-12,kalshi_roy:tie-co-winners,Tie/Co-Winners,kalshi_roy,roy,tie-co-winners,,,,,,,,,,,1,0,1,1,,,63438.5,63135.5
 2026-11-12,kalshi_roy:yaxel-lendeborg,Yaxel Lendeborg,kalshi_roy,roy,yaxel-lendeborg,,,,,,,,,,,49.5,49,50,50,,,603342.23,429841.24
 2026-11-12,kalshi_title:ATL,Atlanta Hawks,kalshi_title,title,ATL,ATL,East,,,,,,,,,1.5,1,2,2,,,1906018.88,1766947.66
 2026-11-12,kalshi_title:BKN,Brooklyn Nets,kalshi_title,title,BKN,BKN,East,,,,,,,,,1,0,1,1,,,17606.59,17604.59

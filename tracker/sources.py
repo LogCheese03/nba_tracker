@@ -84,9 +84,7 @@ def parse_espn_standings(raw: bytes) -> list[dict]:
                 return None
 
             ppg, opp = val("avgPointsFor"), val("avgPointsAgainst")
-            diff = val("differential")
-            if diff is None and ppg is not None and opp is not None:
-                diff = ppg - opp
+            diff = ppg - opp if ppg is not None and opp is not None else val("differential")
             conf = "East" if "east" in conf_name.lower() else "West" if "west" in conf_name.lower() else CONFERENCE[abbr]
             rows.append({
                 "subject": abbr,
@@ -110,13 +108,13 @@ def parse_espn_standings(raw: bytes) -> list[dict]:
 
 # Event slugs to try first; if none is open, the search below finds the event.
 PM_SLUGS = {
-    "title": ["2027-nba-champion", "nba-champion-2026-27", "2026-27-nba-champion"],
-    "mvp": ["nba-mvp-2026-27", "2026-27-nba-mvp", "2027-nba-mvp", "nba-mvp-2027"],
-    "roy": ["nba-rookie-of-the-year-2026-27", "2026-27-nba-rookie-of-the-year",
+    "title": ["nba-2026-27-champion", "nba-champion-2026-27", "2027-nba-champion", "2026-27-nba-champion"],
+    "mvp": ["nba-2026-27-mvp", "nba-mvp-2026-27", "2026-27-nba-mvp", "2027-nba-mvp", "nba-mvp-2027"],
+    "roy": ["nba-2026-27-rookie-of-the-year", "nba-rookie-of-the-year-2026-27", "2026-27-nba-rookie-of-the-year",
             "2027-nba-rookie-of-the-year", "nba-rookie-of-the-year-2027"],
 }
 PM_SEARCH = {
-    "title": ("NBA Champion", r"\bnba champion\b"),
+    "title": ("NBA Champion", r"\bchampion|finals winner|nba finals\b|nba title"),
     "mvp": ("NBA MVP", r"\bmvp\b"),
     "roy": ("NBA Rookie of the Year", r"rookie of the year"),
 }
@@ -135,15 +133,20 @@ def _pm_find_event(market: str) -> str:
             return s
     query, pattern = PM_SEARCH[market]
     found = _get(f"{GAMMA}/public-search", {"q": query, "events_status": "active"}).json()
-    events = found.get("events") if isinstance(found, dict) else found
+    events = list((found.get("events") if isinstance(found, dict) else found) or [])
+    try:  # also look through every open NBA-tagged event
+        tagged = _get(f"{GAMMA}/events", {"tag_slug": "nba", "closed": "false", "limit": 500}).json()
+        events += tagged if isinstance(tagged, list) else []
+    except Exception:  # noqa: BLE001
+        pass
     cands = []
     for ev in events or []:
         title = (ev.get("title") or "").lower()
-        if not re.search(pattern, title) or "nba" not in title and market != "title":
+        if not re.search(pattern, title) or "nba" not in title:
             continue
-        if ev.get("closed"):
+        if ev.get("closed") or ("markets" in ev and len(ev["markets"]) < 10):  # a one-game market, not a futures board
             continue
-        if any(w in title for w in ("wnba", "finals mvp", "g league", "summer league", "conference")):
+        if any(w in title for w in ("wnba", "finals mvp", "g league", "summer league", "conference", "eastern", "western", "division", "cup")):
             continue
         season = any(h in title or h in (ev.get("slug") or "") for h in SEASON_HINTS)
         cands.append((season, ev.get("endDate") or "", ev.get("slug")))
@@ -212,7 +215,7 @@ def parse_polymarket(market: str) -> Callable[[bytes], list[dict]]:
 
 def norm_other(name: str) -> bool:
     n = name.lower()
-    return n in ("other", "others", "field", "any other player", "another team") or n.startswith("player ") or n.startswith("team ")
+    return n.startswith("tie") or n in ("other", "others", "field", "any other player", "another team") or n.startswith("player ") or n.startswith("team ")
 
 
 # -------------------------------------------------------------------------- Kalshi
