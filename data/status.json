@@ -1,0 +1,46 @@
+{
+  "run_time": "2026-11-12T19:37:47Z",
+  "first_run_date": "2026-11-12",
+  "days_with_success": 1,
+  "items": 196,
+  "new_today": [],
+  "gone_today": [],
+  "sources": [
+    {
+      "name": "espn_standings",
+      "ok": true,
+      "count": 30
+    },
+    {
+      "name": "kalshi_mvp",
+      "ok": true,
+      "count": 54
+    },
+    {
+      "name": "kalshi_roy",
+      "ok": true,
+      "count": 18
+    },
+    {
+      "name": "kalshi_title",
+      "ok": true,
+      "count": 30
+    },
+    {
+      "name": "polymarket_mvp",
+      "ok": true,
+      "count": 34
+    },
+    {
+      "name": "polymarket_roy",
+      "ok": true,
+      "count": 30
+    },
+    {
+      "name": "polymarket_title",
+      "ok": false,
+      "count": 0,
+      "error": "RuntimeError: no open Polymarket event found for title"
+    }
+  ]
+}
