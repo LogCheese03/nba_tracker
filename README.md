@@ -11,7 +11,7 @@ Financial Data Analytics — Data Tracker Project.
 
 ## How it runs
 
-GitHub Actions runs `python -m tracker run` every day at 13:17 UTC (7:17 a.m. Central, after the night's games are final), with a backup run at 21:17 UTC. Each run:
+GitHub Actions runs `python -m tracker run` every day at 13:17 UTC (7:17 a.m. Central, after the night's games are final), with backup runs at 05:17, 17:17 and 21:17 UTC (GitHub sometimes delays or skips scheduled runs; extra runs on the same UTC day just replace that day). Each run:
 
 1. Downloads every source and saves the response exactly as it came, gzipped, to `data/raw/<UTC date>/<source>.json.gz`. A source that fails writes no raw file that day, and the run carries on. Every source's result (ok / failed, item count, error) goes in the status file.
 2. Rebuilds `data/history.csv` from the raw files only.

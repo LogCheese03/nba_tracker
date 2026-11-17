@@ -3,7 +3,9 @@ name: Daily run
 on:
   schedule:
     - cron: "17 13 * * *"   # 13:17 UTC (7:17 a.m. Central), after West Coast games are final
-    - cron: "17 21 * * *"   # backup run; a second run the same day just replaces that day
+    - cron: "17 21 * * *"   # backup runs: GitHub can delay or skip scheduled runs,
+    - cron: "17 5 * * *"    # and a second run on the same day just replaces that day
+    - cron: "17 17 * * *"
   workflow_dispatch:
 
 permissions:
