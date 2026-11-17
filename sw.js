@@ -1,6 +1,6 @@
 // Service worker: pages and assets come from the cache (refreshed in the background);
 // data files come from the network first and fall back to the last copy when offline.
-const VERSION = "nba-tracker-v1";
+const VERSION = "nba-tracker-v2";
 const SHELL = [
   "./", "index.html", "browse.html", "trends.html", "manifest.webmanifest",
   "assets/style.css", "assets/common.js", "assets/charts.js",

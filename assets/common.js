@@ -99,7 +99,7 @@ function fmt(col, v) {
 }
 function fmtChange(col, d) {
   if (d == null) return "";
-  if (Math.abs(d) < 1e-9) return `<span class="muted">0</span>`;
+  if (Math.abs(d) < 1e-9) return "";  // no change: show nothing
   const cls = d > 0 ? "up" : "down", s = d > 0 ? "+" : "";
   const txt = col === "win_pct" ? d.toFixed(3) : col.endsWith("_pct") ? d.toFixed(1) + " pts" : col.endsWith("_usd") ? "$" + Math.round(d).toLocaleString() : (Math.round(d * 10) / 10).toString();
   return `<span class="${cls}">${s}${txt}</span>`;
