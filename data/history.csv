@@ -480,18 +480,18 @@ date,item_id,item,source,market,subject,team,conference,wins,losses,win_pct,game
 2026-11-18,kalshi_mvp:alperen-sengun,Alperen Sengun,kalshi_mvp,mvp,alperen-sengun,,,,,,,,,,,1,0,1,1,,,197820.62,197677.96
 2026-11-18,kalshi_mvp:amen-thompson,Amen Thompson,kalshi_mvp,mvp,amen-thompson,,,,,,,,,,,1,0,1,1,,,3200.87,3200.87
 2026-11-18,kalshi_mvp:anthony-davis,Anthony Davis,kalshi_mvp,mvp,anthony-davis,,,,,,,,,,,1,0,1,1,,,27377.48,27377.48
-2026-11-18,kalshi_mvp:anthony-edwards,Anthony Edwards,kalshi_mvp,mvp,anthony-edwards,,,,,,,,,,,1,0,1,1,,,531498.94,419549.22
+2026-11-18,kalshi_mvp:anthony-edwards,Anthony Edwards,kalshi_mvp,mvp,anthony-edwards,,,,,,,,,,,1,0,1,1,,,531831.94,419882.22
 2026-11-18,kalshi_mvp:austin-reaves,Austin Reaves,kalshi_mvp,mvp,austin-reaves,,,,,,,,,,,1,0,1,1,,,788.67,788.67
-2026-11-18,kalshi_mvp:cade-cunningham,Cade Cunningham,kalshi_mvp,mvp,cade-cunningham,,,,,,,,,,,1.5,1,2,2,,,244603.51,209079.39
+2026-11-18,kalshi_mvp:cade-cunningham,Cade Cunningham,kalshi_mvp,mvp,cade-cunningham,,,,,,,,,,,1.5,1,2,2,,,245118.2,209594.08
 2026-11-18,kalshi_mvp:chet-holmgren,Chet Holmgren,kalshi_mvp,mvp,chet-holmgren,,,,,,,,,,,1,0,1,1,,,808.66,808.66
-2026-11-18,kalshi_mvp:cooper-flagg,Cooper Flagg,kalshi_mvp,mvp,cooper-flagg,,,,,,,,,,,1.5,1,2,1,,,631459.46,499195.53
+2026-11-18,kalshi_mvp:cooper-flagg,Cooper Flagg,kalshi_mvp,mvp,cooper-flagg,,,,,,,,,,,1.5,1,2,1,,,632499.39,498890.33
 2026-11-18,kalshi_mvp:deni-avdija,Deni Avdija,kalshi_mvp,mvp,deni-avdija,,,,,,,,,,,1,0,1,1,,,159577.07,159577.07
 2026-11-18,kalshi_mvp:derrick-white,Derrick White,kalshi_mvp,mvp,derrick-white,,,,,,,,,,,1,0,1,1,,,1133.02,1133.02
 2026-11-18,kalshi_mvp:devin-booker,Devin Booker,kalshi_mvp,mvp,devin-booker,,,,,,,,,,,1,0,1,1,,,19581.57,19438.91
 2026-11-18,kalshi_mvp:donovan-mitchell,Donovan Mitchell,kalshi_mvp,mvp,donovan-mitchell,,,,,,,,,,,1,0,1,1,,,27653.46,27254.8
 2026-11-18,kalshi_mvp:dylan-harper,Dylan Harper,kalshi_mvp,mvp,dylan-harper,,,,,,,,,,,1,0,1,1,,,54369.35,54369.35
 2026-11-18,kalshi_mvp:evan-mobley,Evan Mobley,kalshi_mvp,mvp,evan-mobley,,,,,,,,,,,1,0,1,1,,,622.25,622.25
-2026-11-18,kalshi_mvp:giannis-antetokounmpo,Giannis Antetokounmpo,kalshi_mvp,mvp,giannis-antetokounmpo,,,,,,,,,,,2.5,2,3,3,,,575008.2,460726.35
+2026-11-18,kalshi_mvp:giannis-antetokounmpo,Giannis Antetokounmpo,kalshi_mvp,mvp,giannis-antetokounmpo,,,,,,,,,,,2.5,2,3,3,,,584959.55,469621.27
 2026-11-18,kalshi_mvp:ivica-zubac,Ivica Zubac,kalshi_mvp,mvp,ivica-zubac,,,,,,,,,,,1,0,1,1,,,142.66,142.66
 2026-11-18,kalshi_mvp:jalen-brunson,Jalen Brunson,kalshi_mvp,mvp,jalen-brunson,,,,,,,,,,,1,0,1,1,,,302559.41,278731.38
 2026-11-18,kalshi_mvp:jalen-green,Jalen Green,kalshi_mvp,mvp,jalen-green,,,,,,,,,,,1,0,1,1,,,4912.12,4912.12
@@ -502,7 +502,7 @@ date,item_id,item,source,market,subject,team,conference,wins,losses,win_pct,game
 2026-11-18,kalshi_mvp:jaren-jackson-jr,Jaren Jackson Jr.,kalshi_mvp,mvp,jaren-jackson-jr,,,,,,,,,,,1,0,1,1,,,142.66,142.66
 2026-11-18,kalshi_mvp:jarrett-allen,Jarrett Allen,kalshi_mvp,mvp,jarrett-allen,,,,,,,,,,,1,0,1,1,,,142.66,142.66
 2026-11-18,kalshi_mvp:jaylen-brown,Jaylen Brown,kalshi_mvp,mvp,jaylen-brown,,,,,,,,,,,1,0,1,1,,,180949.54,172632.69
-2026-11-18,kalshi_mvp:jayson-tatum,Jayson Tatum,kalshi_mvp,mvp,jayson-tatum,,,,,,,,,,,4.5,4,5,5,,,480588.12,428863.24
+2026-11-18,kalshi_mvp:jayson-tatum,Jayson Tatum,kalshi_mvp,mvp,jayson-tatum,,,,,,,,,,,4.5,4,5,5,,,480704.19,428941.81
 2026-11-18,kalshi_mvp:jimmy-butler,Jimmy Butler,kalshi_mvp,mvp,jimmy-butler,,,,,,,,,,,1,0,1,1,,,142.66,142.66
 2026-11-18,kalshi_mvp:joel-embiid,Joel Embiid,kalshi_mvp,mvp,joel-embiid,,,,,,,,,,,1,0,1,1,,,117603.23,117460.57
 2026-11-18,kalshi_mvp:julius-randle,Julius Randle,kalshi_mvp,mvp,julius-randle,,,,,,,,,,,1,0,1,1,,,142.66,142.66
@@ -512,7 +512,7 @@ date,item_id,item,source,market,subject,team,conference,wins,losses,win_pct,game
 2026-11-18,kalshi_mvp:kon-knueppel,Kon Knueppel,kalshi_mvp,mvp,kon-knueppel,,,,,,,,,,,1,0,1,1,,,880.24,880.24
 2026-11-18,kalshi_mvp:lamelo-ball,LaMelo Ball,kalshi_mvp,mvp,lamelo-ball,,,,,,,,,,,1,0,1,1,,,140580.7,140438.04
 2026-11-18,kalshi_mvp:lebron-james,LeBron James,kalshi_mvp,mvp,lebron-james,,,,,,,,,,,1,0,1,1,,,418899.39,395903.46
-2026-11-18,kalshi_mvp:luka-doncic,Luka Doncic,kalshi_mvp,mvp,luka-doncic,,,,,,,,,,,39.5,39,40,41,,,711843.74,465570.92
+2026-11-18,kalshi_mvp:luka-doncic,Luka Doncic,kalshi_mvp,mvp,luka-doncic,,,,,,,,,,,38.5,38,39,39,,,713238.47,465125.79
 2026-11-18,kalshi_mvp:mikal-bridges,Mikal Bridges,kalshi_mvp,mvp,mikal-bridges,,,,,,,,,,,1,0,1,1,,,142.66,142.66
 2026-11-18,kalshi_mvp:nikola-jokic,Nikola Jokić,kalshi_mvp,mvp,nikola-jokic,,,,,,,,,,,2.5,2,3,2,,,310236.78,296097.43
 2026-11-18,kalshi_mvp:og-anunoby,OG Anunoby,kalshi_mvp,mvp,og-anunoby,,,,,,,,,,,1,0,1,1,,,2854.69,2854.69
@@ -520,154 +520,154 @@ date,item_id,item,source,market,subject,team,conference,wins,losses,win_pct,game
 2026-11-18,kalshi_mvp:pascal-siakam,Pascal Siakam,kalshi_mvp,mvp,pascal-siakam,,,,,,,,,,,1,0,1,1,,,142.66,142.66
 2026-11-18,kalshi_mvp:paul-george,Paul George,kalshi_mvp,mvp,paul-george,,,,,,,,,,,1,0,1,1,,,3789.28,3789.28
 2026-11-18,kalshi_mvp:scottie-barnes,Scottie Barnes,kalshi_mvp,mvp,scottie-barnes,,,,,,,,,,,1,0,1,1,,,26795.26,26795.26
-2026-11-18,kalshi_mvp:shai-gilgeous-alexander,Shai Gilgeous-Alexander,kalshi_mvp,mvp,shai-gilgeous-alexander,,,,,,,,,,,6.5,6,7,6,,,409974.19,340266.52
+2026-11-18,kalshi_mvp:shai-gilgeous-alexander,Shai Gilgeous-Alexander,kalshi_mvp,mvp,shai-gilgeous-alexander,,,,,,,,,,,5.5,5,6,5,,,410387.98,339932.97
 2026-11-18,kalshi_mvp:stephen-curry,Stephen Curry,kalshi_mvp,mvp,stephen-curry,,,,,,,,,,,1,0,1,1,,,611431.68,511601.2
 2026-11-18,kalshi_mvp:stephon-castle,Stephon Castle,kalshi_mvp,mvp,stephon-castle,,,,,,,,,,,1,0,1,1,,,175.66,175.66
 2026-11-18,kalshi_mvp:trae-young,Trae Young,kalshi_mvp,mvp,trae-young,,,,,,,,,,,1,0,1,1,,,13684.44,13684.44
 2026-11-18,kalshi_mvp:tyler-herro,Tyler Herro,kalshi_mvp,mvp,tyler-herro,,,,,,,,,,,1,0,1,1,,,269.17,175.66
 2026-11-18,kalshi_mvp:tyrese-haliburton,Tyrese Haliburton,kalshi_mvp,mvp,tyrese-haliburton,,,,,,,,,,,1,0,1,1,,,205013.65,204567.99
 2026-11-18,kalshi_mvp:tyrese-maxey,Tyrese Maxey,kalshi_mvp,mvp,tyrese-maxey,,,,,,,,,,,1.5,1,2,1,,,631665.41,506151.74
-2026-11-18,kalshi_mvp:victor-wembanyama,Victor Wembanyama,kalshi_mvp,mvp,victor-wembanyama,,,,,,,,,,,43.5,43,44,44,,,524873.87,463517.42
+2026-11-18,kalshi_mvp:victor-wembanyama,Victor Wembanyama,kalshi_mvp,mvp,victor-wembanyama,,,,,,,,,,,43.5,43,44,44,,,525339.88,463622.82
 2026-11-18,kalshi_mvp:vj-edgecombe,VJ Edgecombe,kalshi_mvp,mvp,vj-edgecombe,,,,,,,,,,,1,0,1,1,,,1665.14,1665.14
 2026-11-18,kalshi_mvp:zion-williamson,Zion Williamson,kalshi_mvp,mvp,zion-williamson,,,,,,,,,,,1,0,1,1,,,15706.85,15706.85
-2026-11-18,kalshi_roy:aday-mara,Aday Mara,kalshi_roy,roy,aday-mara,,,,,,,,,,,1,0,1,1,,,319540.08,252205.28
-2026-11-18,kalshi_roy:aj-dybantsa,AJ Dybantsa,kalshi_roy,roy,aj-dybantsa,,,,,,,,,,,4.5,4,5,5,,,326710.4,232811.99
+2026-11-18,kalshi_roy:aday-mara,Aday Mara,kalshi_roy,roy,aday-mara,,,,,,,,,,,1,0,1,1,,,319548.08,252205.28
+2026-11-18,kalshi_roy:aj-dybantsa,AJ Dybantsa,kalshi_roy,roy,aj-dybantsa,,,,,,,,,,,4.5,4,5,5,,,327712.17,233749.63
 2026-11-18,kalshi_roy:bennett-stirtz,Bennett Stirtz,kalshi_roy,roy,bennett-stirtz,,,,,,,,,,,1,0,1,1,,,25036.01,25028.01
-2026-11-18,kalshi_roy:brayden-burries,Brayden Burries,kalshi_roy,roy,brayden-burries,,,,,,,,,,,1,0,1,1,,,165617.27,158827.75
-2026-11-18,kalshi_roy:caleb-wilson,Caleb Wilson,kalshi_roy,roy,caleb-wilson,,,,,,,,,,,1.5,1,2,2,,,372153.02,259713.63
-2026-11-18,kalshi_roy:cameron-boozer,Cameron Boozer,kalshi_roy,roy,cameron-boozer,,,,,,,,,,,24.5,24,25,25,,,321962.92,265610.81
+2026-11-18,kalshi_roy:brayden-burries,Brayden Burries,kalshi_roy,roy,brayden-burries,,,,,,,,,,,1,0,1,1,,,165625.27,158827.75
+2026-11-18,kalshi_roy:caleb-wilson,Caleb Wilson,kalshi_roy,roy,caleb-wilson,,,,,,,,,,,1.5,1,2,1,,,372592.02,259713.63
+2026-11-18,kalshi_roy:cameron-boozer,Cameron Boozer,kalshi_roy,roy,cameron-boozer,,,,,,,,,,,26.5,26,27,26,,,322556.63,265803.44
 2026-11-18,kalshi_roy:dailyn-swain,Dailyn Swain,kalshi_roy,roy,dailyn-swain,,,,,,,,,,,1,0,1,1,,,872.92,872.92
-2026-11-18,kalshi_roy:darius-acuff-jr,Darius Acuff Jr.,kalshi_roy,roy,darius-acuff-jr,,,,,,,,,,,16.5,16,17,17,,,433933.3,300205.84
-2026-11-18,kalshi_roy:darryn-peterson,Darryn Peterson,kalshi_roy,roy,darryn-peterson,,,,,,,,,,,6.5,6,7,7,,,287742.82,232139.51
+2026-11-18,kalshi_roy:darius-acuff-jr,Darius Acuff Jr.,kalshi_roy,roy,darius-acuff-jr,,,,,,,,,,,18,17,19,19,,,435566.43,300215.74
+2026-11-18,kalshi_roy:darryn-peterson,Darryn Peterson,kalshi_roy,roy,darryn-peterson,,,,,,,,,,,7,6,8,8,,,288073.98,232462.67
 2026-11-18,kalshi_roy:hannes-steinbach,Hannes Steinbach,kalshi_roy,roy,hannes-steinbach,,,,,,,,,,,1,0,1,1,,,13017.11,13017.11
-2026-11-18,kalshi_roy:keaton-wagler,Keaton Wagler,kalshi_roy,roy,keaton-wagler,,,,,,,,,,,1,0,1,1,,,149719.74,133036.42
-2026-11-18,kalshi_roy:kingston-flemings,Kingston Flemings,kalshi_roy,roy,kingston-flemings,,,,,,,,,,,1,0,1,1,,,97373.96,94001.74
-2026-11-18,kalshi_roy:mikel-brown-jr,Mikel Brown Jr.,kalshi_roy,roy,mikel-brown-jr,,,,,,,,,,,1,0,1,1,,,168844.52,160349.28
+2026-11-18,kalshi_roy:keaton-wagler,Keaton Wagler,kalshi_roy,roy,keaton-wagler,,,,,,,,,,,1,0,1,1,,,149727.74,133036.42
+2026-11-18,kalshi_roy:kingston-flemings,Kingston Flemings,kalshi_roy,roy,kingston-flemings,,,,,,,,,,,1,0,1,1,,,97381.96,94001.74
+2026-11-18,kalshi_roy:mikel-brown-jr,Mikel Brown Jr.,kalshi_roy,roy,mikel-brown-jr,,,,,,,,,,,1,0,1,1,,,168852.52,160349.28
 2026-11-18,kalshi_roy:morez-johnson-jr,Morez Johnson Jr.,kalshi_roy,roy,morez-johnson-jr,,,,,,,,,,,1,0,1,1,,,17158.99,16545.22
 2026-11-18,kalshi_roy:nate-ament,Nate Ament,kalshi_roy,roy,nate-ament,,,,,,,,,,,1,0,1,1,,,2556.73,2548.73
 2026-11-18,kalshi_roy:ryan-conwell,Ryan Conwell,kalshi_roy,roy,ryan-conwell,,,,,,,,,,,1,0,1,1,,,467.58,467.58
-2026-11-18,kalshi_roy:yaxel-lendeborg,Yaxel Lendeborg,kalshi_roy,roy,yaxel-lendeborg,,,,,,,,,,,31,30,32,32,,,663759.09,434955.68
+2026-11-18,kalshi_roy:yaxel-lendeborg,Yaxel Lendeborg,kalshi_roy,roy,yaxel-lendeborg,,,,,,,,,,,31.5,31,32,32,,,665871.52,435514.84
 2026-11-18,kalshi_title:ATL,Atlanta Hawks,kalshi_title,title,ATL,ATL,East,,,,,,,,,1,0,1,1,,,1911497.01,1771495.62
 2026-11-18,kalshi_title:BKN,Brooklyn Nets,kalshi_title,title,BKN,BKN,East,,,,,,,,,1,0,1,1,,,17706.63,17704.63
-2026-11-18,kalshi_title:BOS,Boston Celtics,kalshi_title,title,BOS,BOS,East,,,,,,,,,9.5,9,10,10,,,2690528.99,2493594.22
+2026-11-18,kalshi_title:BOS,Boston Celtics,kalshi_title,title,BOS,BOS,East,,,,,,,,,9.5,9,10,10,,,2718687.39,2521442.4
 2026-11-18,kalshi_title:CHA,Charlotte Hornets,kalshi_title,title,CHA,CHA,East,,,,,,,,,1,0,1,1,,,259818.44,248564.03
 2026-11-18,kalshi_title:CHI,Chicago Bulls,kalshi_title,title,CHI,CHI,East,,,,,,,,,1,0,1,1,,,145779.65,145779.65
-2026-11-18,kalshi_title:CLE,Cleveland Cavaliers,kalshi_title,title,CLE,CLE,East,,,,,,,,,2.5,2,3,3,,,2164472.06,1841547.24
-2026-11-18,kalshi_title:DAL,Dallas Mavericks,kalshi_title,title,DAL,DAL,West,,,,,,,,,1.5,1,2,2,,,3595153.72,3298886.71
+2026-11-18,kalshi_title:CLE,Cleveland Cavaliers,kalshi_title,title,CLE,CLE,East,,,,,,,,,2.5,2,3,2,,,2165409.7,1840609.6
+2026-11-18,kalshi_title:DAL,Dallas Mavericks,kalshi_title,title,DAL,DAL,West,,,,,,,,,1.5,1,2,1,,,3595808.35,3298886.71
 2026-11-18,kalshi_title:DEN,Denver Nuggets,kalshi_title,title,DEN,DEN,West,,,,,,,,,2.5,2,3,3,,,1364923.93,1160178
-2026-11-18,kalshi_title:DET,Detroit Pistons,kalshi_title,title,DET,DET,East,,,,,,,,,3.5,3,4,4,,,1976378.21,1802124.96
-2026-11-18,kalshi_title:GS,Golden State Warriors,kalshi_title,title,GS,GS,West,,,,,,,,,2.5,2,3,3,,,5159210.33,3290672.82
-2026-11-18,kalshi_title:HOU,Houston Rockets,kalshi_title,title,HOU,HOU,West,,,,,,,,,5.5,5,6,5,,,3338331.23,2458878.98
-2026-11-18,kalshi_title:IND,Indiana Pacers,kalshi_title,title,IND,IND,East,,,,,,,,,1.5,1,2,2,,,2063760.7,1586414.88
+2026-11-18,kalshi_title:DET,Detroit Pistons,kalshi_title,title,DET,DET,East,,,,,,,,,3.5,3,4,4,,,1977310.3,1802505.65
+2026-11-18,kalshi_title:GS,Golden State Warriors,kalshi_title,title,GS,GS,West,,,,,,,,,2.5,2,3,2,,,5169929.96,3300119.08
+2026-11-18,kalshi_title:HOU,Houston Rockets,kalshi_title,title,HOU,HOU,West,,,,,,,,,5.5,5,6,6,,,3338453.33,2459001.08
+2026-11-18,kalshi_title:IND,Indiana Pacers,kalshi_title,title,IND,IND,East,,,,,,,,,1.5,1,2,1,,,2063965.7,1586414.88
 2026-11-18,kalshi_title:LAC,LA Clippers,kalshi_title,title,LAC,LAC,West,,,,,,,,,1,0,1,1,,,123335.34,118217.4
-2026-11-18,kalshi_title:LAL,Los Angeles Lakers,kalshi_title,title,LAL,LAL,West,,,,,,,,,4.5,4,5,5,,,4391233.53,3624471.52
-2026-11-18,kalshi_title:MEM,Memphis Grizzlies,kalshi_title,title,MEM,MEM,West,,,,,,,,,1,0,1,1,,,1360420.8,1355877.78
-2026-11-18,kalshi_title:MIA,Miami Heat,kalshi_title,title,MIA,MIA,East,,,,,,,,,3.5,3,4,4,,,5136111.85,3360262.8
+2026-11-18,kalshi_title:LAL,Los Angeles Lakers,kalshi_title,title,LAL,LAL,West,,,,,,,,,4.5,4,5,5,,,4413824.92,3646319.22
+2026-11-18,kalshi_title:MEM,Memphis Grizzlies,kalshi_title,title,MEM,MEM,West,,,,,,,,,1,0,1,1,,,1361543.02,1357000
+2026-11-18,kalshi_title:MIA,Miami Heat,kalshi_title,title,MIA,MIA,East,,,,,,,,,3.5,3,4,4,,,5142122.03,3366241.77
 2026-11-18,kalshi_title:MIL,Milwaukee Bucks,kalshi_title,title,MIL,MIL,East,,,,,,,,,1,0,1,1,,,50797.45,50272.61
-2026-11-18,kalshi_title:MIN,Minnesota Timberwolves,kalshi_title,title,MIN,MIN,West,,,,,,,,,5.5,5,6,6,,,5743633.69,3657455.37
+2026-11-18,kalshi_title:MIN,Minnesota Timberwolves,kalshi_title,title,MIN,MIN,West,,,,,,,,,5.5,5,6,6,,,5750386.03,3663954.63
 2026-11-18,kalshi_title:NO,New Orleans Pelicans,kalshi_title,title,NO,NO,West,,,,,,,,,1,0,1,1,,,46381.36,46361.36
-2026-11-18,kalshi_title:NY,New York Knicks,kalshi_title,title,NY,NY,East,,,,,,,,,6.5,6,7,7,,,1788721.95,1395957.93
-2026-11-18,kalshi_title:OKC,Oklahoma City Thunder,kalshi_title,title,OKC,OKC,West,,,,,,,,,12.5,12,13,12,,,2276416.64,1791054.54
-2026-11-18,kalshi_title:ORL,Orlando Magic,kalshi_title,title,ORL,ORL,East,,,,,,,,,1,0,1,1,,,1589045.15,1160849.35
-2026-11-18,kalshi_title:PHI,Philadelphia 76ers,kalshi_title,title,PHI,PHI,East,,,,,,,,,10.5,10,11,11,,,11205386.43,6953864.62
+2026-11-18,kalshi_title:NY,New York Knicks,kalshi_title,title,NY,NY,East,,,,,,,,,6.5,6,7,6,,,1791120.87,1397686.23
+2026-11-18,kalshi_title:OKC,Oklahoma City Thunder,kalshi_title,title,OKC,OKC,West,,,,,,,,,13.5,13,14,14,,,2280791.43,1792601.89
+2026-11-18,kalshi_title:ORL,Orlando Magic,kalshi_title,title,ORL,ORL,East,,,,,,,,,1,0,1,1,,,1589138.66,1160942.86
+2026-11-18,kalshi_title:PHI,Philadelphia 76ers,kalshi_title,title,PHI,PHI,East,,,,,,,,,10.5,10,11,10,,,11208939.54,6955189.94
 2026-11-18,kalshi_title:PHX,Phoenix Suns,kalshi_title,title,PHX,PHX,West,,,,,,,,,1,0,1,1,,,95652.92,95630.92
-2026-11-18,kalshi_title:POR,Portland Trail Blazers,kalshi_title,title,POR,POR,West,,,,,,,,,2.5,2,3,3,,,3201967.24,2492000.17
-2026-11-18,kalshi_title:SA,San Antonio Spurs,kalshi_title,title,SA,SA,West,,,,,,,,,21.5,21,22,22,,,2118736.9,1582266.1
+2026-11-18,kalshi_title:POR,Portland Trail Blazers,kalshi_title,title,POR,POR,West,,,,,,,,,2.5,2,3,2,,,3203231.7,2491891.77
+2026-11-18,kalshi_title:SA,San Antonio Spurs,kalshi_title,title,SA,SA,West,,,,,,,,,21.5,21,22,21,,,2122858.93,1583422.88
 2026-11-18,kalshi_title:SAC,Sacramento Kings,kalshi_title,title,SAC,SAC,West,,,,,,,,,1,0,1,1,,,121701.65,121701.65
 2026-11-18,kalshi_title:TOR,Toronto Raptors,kalshi_title,title,TOR,TOR,East,,,,,,,,,3.5,3,4,4,,,1986024.86,1628312.17
-2026-11-18,kalshi_title:UTAH,Utah Jazz,kalshi_title,title,UTAH,UTAH,West,,,,,,,,,1,0,1,1,,,811279.87,798709.93
-2026-11-18,kalshi_title:WSH,Washington Wizards,kalshi_title,title,WSH,WSH,East,,,,,,,,,1,0,1,1,,,1289439.13,1241831.13
-2026-11-18,polymarket_mvp:alperen-sengun,Alperen Sengun,polymarket_mvp,mvp,alperen-sengun,,,,,,,,,,,0.35,0.3,0.4,,14330.2772,21922.4829,,
-2026-11-18,polymarket_mvp:anthony-davis,Anthony Davis,polymarket_mvp,mvp,anthony-davis,,,,,,,,,,,0.15,0.1,0.2,,8250.755,26139.8447,,
-2026-11-18,polymarket_mvp:anthony-edwards,Anthony Edwards,polymarket_mvp,mvp,anthony-edwards,,,,,,,,,,,0.35,0.3,0.4,,41484.5919,27656.7986,,
-2026-11-18,polymarket_mvp:austin-reaves,Austin Reaves,polymarket_mvp,mvp,austin-reaves,,,,,,,,,,,0.05,,0.1,,100.87,19209.3818,,
-2026-11-18,polymarket_mvp:bam-adebayo,Bam Adebayo,polymarket_mvp,mvp,bam-adebayo,,,,,,,,,,,0.05,,0.1,,1263.671,19164.9206,,
-2026-11-18,polymarket_mvp:cade-cunningham,Cade Cunningham,polymarket_mvp,mvp,cade-cunningham,,,,,,,,,,,1.75,1.7,1.8,,18314.6022,27650.1587,,
-2026-11-18,polymarket_mvp:cooper-flagg,Cooper Flagg,polymarket_mvp,mvp,cooper-flagg,,,,,,,,,,,0.6,0.3,0.9,,13669.4565,25444.5449,,
-2026-11-18,polymarket_mvp:deni-avdija,Deni Avdija,polymarket_mvp,mvp,deni-avdija,,,,,,,,,,,0.35,0.3,0.4,,25978.8379,21690.487,,
-2026-11-18,polymarket_mvp:devin-booker,Devin Booker,polymarket_mvp,mvp,devin-booker,,,,,,,,,,,0.05,,0.1,,6186.945,21136.9771,,
-2026-11-18,polymarket_mvp:donovan-mitchell,Donovan Mitchell,polymarket_mvp,mvp,donovan-mitchell,,,,,,,,,,,0.15,0.1,0.2,,11629.2299,27553.9545,,
-2026-11-18,polymarket_mvp:evan-mobley,Evan Mobley,polymarket_mvp,mvp,evan-mobley,,,,,,,,,,,0.05,,0.1,,1057.5,19698.2236,,
-2026-11-18,polymarket_mvp:giannis-antetokounmpo,Giannis Antetokounmpo,polymarket_mvp,mvp,giannis-antetokounmpo,,,,,,,,,,,1.55,1.5,1.6,,14190.5883,30606.8678,,
-2026-11-18,polymarket_mvp:jalen-brunson,Jalen Brunson,polymarket_mvp,mvp,jalen-brunson,,,,,,,,,,,0.25,0.2,0.3,,14168.7982,19550.5018,,
-2026-11-18,polymarket_mvp:jalen-johnson,Jalen Johnson,polymarket_mvp,mvp,jalen-johnson,,,,,,,,,,,0.25,0.2,0.3,,12419.1635,26164.2567,,
-2026-11-18,polymarket_mvp:jamal-murray,Jamal Murray,polymarket_mvp,mvp,jamal-murray,,,,,,,,,,,0.05,,0.1,,140.4,20591.9835,,
-2026-11-18,polymarket_mvp:jaylen-brown,Jaylen Brown,polymarket_mvp,mvp,jaylen-brown,,,,,,,,,,,0.15,0.1,0.2,,15077.2721,27207.5443,,
-2026-11-18,polymarket_mvp:jayson-tatum,Jayson Tatum,polymarket_mvp,mvp,jayson-tatum,,,,,,,,,,,3.05,3,3.1,,16981.1023,23634.0289,,
-2026-11-18,polymarket_mvp:joel-embiid,Joel Embiid,polymarket_mvp,mvp,joel-embiid,,,,,,,,,,,0.05,,0.1,,1141.9386,20045.681,,
-2026-11-18,polymarket_mvp:karl-anthony-towns,Karl-Anthony Towns,polymarket_mvp,mvp,karl-anthony-towns,,,,,,,,,,,0.05,,0.1,,1586.895,19271.3636,,
-2026-11-18,polymarket_mvp:kawhi-leonard,Kawhi Leonard,polymarket_mvp,mvp,kawhi-leonard,,,,,,,,,,,0.05,,0.1,,6625.3296,19551.6847,,
-2026-11-18,polymarket_mvp:kevin-durant,Kevin Durant,polymarket_mvp,mvp,kevin-durant,,,,,,,,,,,0.05,,0.1,,1968.1453,19423.7032,,
-2026-11-18,polymarket_mvp:lamelo-ball,LaMelo Ball,polymarket_mvp,mvp,lamelo-ball,,,,,,,,,,,0.05,,0.1,,129.2,20378.3663,,
-2026-11-18,polymarket_mvp:lebron-james,LeBron James,polymarket_mvp,mvp,lebron-james,,,,,,,,,,,0.05,,0.1,,4267.8197,22066.1556,,
-2026-11-18,polymarket_mvp:luka-doncic,Luka Doncic,polymarket_mvp,mvp,luka-doncic,,,,,,,,,,,39.85,39.8,39.9,,35677.3489,13420.4154,,
-2026-11-18,polymarket_mvp:nikola-jokic,Nikola Jokic,polymarket_mvp,mvp,nikola-jokic,,,,,,,,,,,4.5,4,5,,24643.4734,56271.3228,,
-2026-11-18,polymarket_mvp:paolo-banchero,Paolo Banchero,polymarket_mvp,mvp,paolo-banchero,,,,,,,,,,,0.05,,0.1,,6162.251,17024.8546,,
-2026-11-18,polymarket_mvp:scottie-barnes,Scottie Barnes,polymarket_mvp,mvp,scottie-barnes,,,,,,,,,,,0.1,,0.2,,7606.4295,20145.9296,,
-2026-11-18,polymarket_mvp:shai-gilgeous-alexander,Shai Gilgeous-Alexander,polymarket_mvp,mvp,shai-gilgeous-alexander,,,,,,,,,,,5.5,5,6,,19926.4597,54669.2618,,
-2026-11-18,polymarket_mvp:stephen-curry,Stephen Curry,polymarket_mvp,mvp,stephen-curry,,,,,,,,,,,0.65,0.6,0.7,,27416.1347,15077.8534,,
-2026-11-18,polymarket_mvp:ty-jerome,Ty Jerome,polymarket_mvp,mvp,ty-jerome,,,,,,,,,,,0.05,,0.1,,4073.7563,10417.0955,,
-2026-11-18,polymarket_mvp:tyrese-haliburton,Tyrese Haliburton,polymarket_mvp,mvp,tyrese-haliburton,,,,,,,,,,,0.1,,0.2,,9812.88,15637.7457,,
-2026-11-18,polymarket_mvp:tyrese-maxey,Tyrese Maxey,polymarket_mvp,mvp,tyrese-maxey,,,,,,,,,,,1.15,1.1,1.2,,31811.2915,30280.9368,,
-2026-11-18,polymarket_mvp:victor-wembanyama,Victor Wembanyama,polymarket_mvp,mvp,victor-wembanyama,,,,,,,,,,,42.5,42,43,,38691.5521,14820.2657,,
-2026-11-18,polymarket_mvp:zion-williamson,Zion Williamson,polymarket_mvp,mvp,zion-williamson,,,,,,,,,,,0.05,,0.1,,157.4994,21811.9229,,
-2026-11-18,polymarket_roy:aday-mara,Aday Mara,polymarket_roy,roy,aday-mara,,,,,,,,,,,0.25,0.2,0.3,,22578.3464,10056.1313,,
-2026-11-18,polymarket_roy:aj-dybantsa,AJ Dybantsa,polymarket_roy,roy,aj-dybantsa,,,,,,,,,,,7.5,7,8,,38798.2169,15957.2438,,
-2026-11-18,polymarket_roy:alex-karaban,Alex Karaban,polymarket_roy,roy,alex-karaban,,,,,,,,,,,0.05,,0.1,,9921.922,6184.2482,,
-2026-11-18,polymarket_roy:allen-graves,Allen Graves,polymarket_roy,roy,allen-graves,,,,,,,,,,,0.15,0.1,0.2,,676155.2735,13303.3485,,
-2026-11-18,polymarket_roy:bennett-stirtz,Bennett Stirtz,polymarket_roy,roy,bennett-stirtz,,,,,,,,,,,0.05,,0.1,,11210.9513,6847.8686,,
-2026-11-18,polymarket_roy:brayden-burries,Brayden Burries,polymarket_roy,roy,brayden-burries,,,,,,,,,,,0.2,0.1,0.3,,20863.1591,11814.5553,,
-2026-11-18,polymarket_roy:caleb-wilson,Caleb Wilson,polymarket_roy,roy,caleb-wilson,,,,,,,,,,,3.7,2.4,5,,47027.828,9018.2561,,
-2026-11-18,polymarket_roy:cameron-boozer,Cameron Boozer,polymarket_roy,roy,cameron-boozer,,,,,,,,,,,23,22,24,,37717.0277,5525.3969,,
-2026-11-18,polymarket_roy:cameron-carr,Cameron Carr,polymarket_roy,roy,cameron-carr,,,,,,,,,,,0.05,,0.1,,12559.4204,6453.8494,,
-2026-11-18,polymarket_roy:chris-cenac-jr,Chris Cenac Jr.,polymarket_roy,roy,chris-cenac-jr,,,,,,,,,,,0.15,0.1,0.2,,487302.9715,11596.9701,,
-2026-11-18,polymarket_roy:christian-anderson,Christian Anderson,polymarket_roy,roy,christian-anderson,,,,,,,,,,,0.15,0.1,0.2,,383216.2329,10055.8096,,
-2026-11-18,polymarket_roy:dailyn-swain,Dailyn Swain,polymarket_roy,roy,dailyn-swain,,,,,,,,,,,0.05,,0.1,,3868.159,10178.0042,,
-2026-11-18,polymarket_roy:darius-acuff-jr,Darius Acuff Jr.,polymarket_roy,roy,darius-acuff-jr,,,,,,,,,,,15,13,17,,38041.2332,6457.7482,,
-2026-11-18,polymarket_roy:darryn-peterson,Darryn Peterson,polymarket_roy,roy,darryn-peterson,,,,,,,,,,,7.05,6.3,7.8,,45759.9037,6259.6612,,
-2026-11-18,polymarket_roy:ebuka-okorie,Ebuka Okorie,polymarket_roy,roy,ebuka-okorie,,,,,,,,,,,0.15,0.1,0.2,,2623180.5623,10619.1642,,
-2026-11-18,polymarket_roy:hannes-steinbach,Hannes Steinbach,polymarket_roy,roy,hannes-steinbach,,,,,,,,,,,0.05,,0.1,,5439.862,8867.0905,,
-2026-11-18,polymarket_roy:jayden-quaintance,Jayden Quaintance,polymarket_roy,roy,jayden-quaintance,,,,,,,,,,,0.05,,0.1,,70342.5847,12502.4352,,
-2026-11-18,polymarket_roy:joshua-jefferson,Joshua Jefferson,polymarket_roy,roy,joshua-jefferson,,,,,,,,,,,0.05,,0.1,,82451.0532,13546.1288,,
-2026-11-18,polymarket_roy:karim-lopez,Karim López,polymarket_roy,roy,karim-lopez,,,,,,,,,,,0.05,,0.1,,7730.038,7535.9225,,
-2026-11-18,polymarket_roy:keaton-wagler,Keaton Wagler,polymarket_roy,roy,keaton-wagler,,,,,,,,,,,0.05,,0.1,,19812.4049,8865.1337,,
-2026-11-18,polymarket_roy:kingston-flemings,Kingston Flemings,polymarket_roy,roy,kingston-flemings,,,,,,,,,,,0.15,0.1,0.2,,300962.8712,6618.701,,
-2026-11-18,polymarket_roy:koa-peat,Koa Peat,polymarket_roy,roy,koa-peat,,,,,,,,,,,0.05,,0.1,,8803.6988,6631.7675,,
-2026-11-18,polymarket_roy:labaron-philon-jr,Labaron Philon Jr.,polymarket_roy,roy,labaron-philon-jr,,,,,,,,,,,0.15,0.1,0.2,,331663.7269,4882.7855,,
-2026-11-18,polymarket_roy:mikel-brown-jr,Mikel Brown Jr.,polymarket_roy,roy,mikel-brown-jr,,,,,,,,,,,0.15,0.1,0.2,,14759.5051,11655.619,,
-2026-11-18,polymarket_roy:morez-johnson-jr,Morez Johnson Jr.,polymarket_roy,roy,morez-johnson-jr,,,,,,,,,,,0.05,,0.1,,5741.6038,9487.098,,
-2026-11-18,polymarket_roy:nate-ament,Nate Ament,polymarket_roy,roy,nate-ament,,,,,,,,,,,0.15,0.1,0.2,,13781.513,8942.9913,,
-2026-11-18,polymarket_roy:sergio-de-larrea,Sergio De Larrea,polymarket_roy,roy,sergio-de-larrea,,,,,,,,,,,0.25,0.2,0.3,,13696.7808,4880.7511,,
-2026-11-18,polymarket_roy:tarris-reed-jr,Tarris Reed Jr.,polymarket_roy,roy,tarris-reed-jr,,,,,,,,,,,0.15,0.1,0.2,,1821235.7815,12906.367,,
-2026-11-18,polymarket_roy:yaxel-lendeborg,Yaxel Lendeborg,polymarket_roy,roy,yaxel-lendeborg,,,,,,,,,,,29.2,28.3,30.1,,50213.0606,6323.7759,,
-2026-11-18,polymarket_roy:zuby-ejiofor,Zuby Ejiofor,polymarket_roy,roy,zuby-ejiofor,,,,,,,,,,,0.15,0.1,0.2,,1081800.3631,11400.4794,,
-2026-11-18,polymarket_title:ATL,Atlanta Hawks,polymarket_title,title,ATL,ATL,East,,,,,,,,,0.95,0.9,1,,1413011.0247,186638.6976,,
-2026-11-18,polymarket_title:BKN,Brooklyn Nets,polymarket_title,title,BKN,BKN,East,,,,,,,,,0.05,,0.1,,1134027.7382,559923.9966,,
-2026-11-18,polymarket_title:BOS,Boston Celtics,polymarket_title,title,BOS,BOS,East,,,,,,,,,9.5,9,10,,1203799.6654,192908.0591,,
-2026-11-18,polymarket_title:CHA,Charlotte Hornets,polymarket_title,title,CHA,CHA,East,,,,,,,,,0.15,0.1,0.2,,1234528.3883,278449.515,,
-2026-11-18,polymarket_title:CHI,Chicago Bulls,polymarket_title,title,CHI,CHI,East,,,,,,,,,0.05,,0.1,,1059259.654,709729.7769,,
-2026-11-18,polymarket_title:CLE,Cleveland Cavaliers,polymarket_title,title,CLE,CLE,East,,,,,,,,,1.95,1.9,2,,1370585.6328,337397.6778,,
-2026-11-18,polymarket_title:DAL,Dallas Mavericks,polymarket_title,title,DAL,DAL,West,,,,,,,,,0.75,0.7,0.8,,1337278.0383,269316.9395,,
-2026-11-18,polymarket_title:DEN,Denver Nuggets,polymarket_title,title,DEN,DEN,West,,,,,,,,,2.55,2.5,2.6,,1326256.3284,296722.0959,,
-2026-11-18,polymarket_title:DET,Detroit Pistons,polymarket_title,title,DET,DET,East,,,,,,,,,3.65,3.6,3.7,,1321720.6936,177296.2938,,
-2026-11-18,polymarket_title:GS,Golden State Warriors,polymarket_title,title,GS,GS,West,,,,,,,,,1.95,1.9,2,,1956367.0201,211767.8776,,
-2026-11-18,polymarket_title:HOU,Houston Rockets,polymarket_title,title,HOU,HOU,West,,,,,,,,,5.25,5.2,5.3,,1600740.482,157156.7343,,
-2026-11-18,polymarket_title:IND,Indiana Pacers,polymarket_title,title,IND,IND,East,,,,,,,,,1.35,1.3,1.4,,1254185.4442,140618.2506,,
-2026-11-18,polymarket_title:LAC,LA Clippers,polymarket_title,title,LAC,LAC,West,,,,,,,,,0.05,,0.1,,1013804.8109,624756.1402,,
-2026-11-18,polymarket_title:LAL,Los Angeles Lakers,polymarket_title,title,LAL,LAL,West,,,,,,,,,6.05,6,6.1,,1510236.0462,170733.5805,,
-2026-11-18,polymarket_title:MEM,Memphis Grizzlies,polymarket_title,title,MEM,MEM,West,,,,,,,,,0.65,0.6,0.7,,1235085.641,477121.397,,
-2026-11-18,polymarket_title:MIA,Miami Heat,polymarket_title,title,MIA,MIA,East,,,,,,,,,2.55,2.5,2.6,,1324038.6722,185975.9055,,
-2026-11-18,polymarket_title:MIL,Milwaukee Bucks,polymarket_title,title,MIL,MIL,East,,,,,,,,,0.05,,0.1,,793045.6415,752652.4534,,
-2026-11-18,polymarket_title:MIN,Minnesota Timberwolves,polymarket_title,title,MIN,MIN,West,,,,,,,,,6.25,6.2,6.3,,1313584.4305,207557.6775,,
-2026-11-18,polymarket_title:NO,New Orleans Pelicans,polymarket_title,title,NO,NO,West,,,,,,,,,0.05,,0.1,,1240786.7645,255118.4511,,
-2026-11-18,polymarket_title:NY,New York Knicks,polymarket_title,title,NY,NY,East,,,,,,,,,8.5,8,9,,1223301.4462,195099.2134,,
-2026-11-18,polymarket_title:OKC,Oklahoma City Thunder,polymarket_title,title,OKC,OKC,West,,,,,,,,,13.5,13,14,,1435511.885,240803.1818,,
-2026-11-18,polymarket_title:ORL,Orlando Magic,polymarket_title,title,ORL,ORL,East,,,,,,,,,0.65,0.6,0.7,,1422835.1251,248152.6643,,
-2026-11-18,polymarket_title:PHI,Philadelphia 76ers,polymarket_title,title,PHI,PHI,East,,,,,,,,,9.35,9.3,9.4,,2038243.933,140112.0078,,
-2026-11-18,polymarket_title:PHX,Phoenix Suns,polymarket_title,title,PHX,PHX,West,,,,,,,,,0.25,0.2,0.3,,1372198.6897,202470.4223,,
-2026-11-18,polymarket_title:POR,Portland Trail Blazers,polymarket_title,title,POR,POR,West,,,,,,,,,2.95,2.9,3,,1518757.4066,124660.143,,
-2026-11-18,polymarket_title:SA,San Antonio Spurs,polymarket_title,title,SA,SA,West,,,,,,,,,22.5,22,23,,1208215.4192,171058.8082,,
-2026-11-18,polymarket_title:SAC,Sacramento Kings,polymarket_title,title,SAC,SAC,West,,,,,,,,,0.05,,0.1,,798079.4643,761521.9718,,
-2026-11-18,polymarket_title:TOR,Toronto Raptors,polymarket_title,title,TOR,TOR,East,,,,,,,,,3.15,3.1,3.2,,1312867.1371,136212.4294,,
-2026-11-18,polymarket_title:UTAH,Utah Jazz,polymarket_title,title,UTAH,UTAH,West,,,,,,,,,0.35,0.3,0.4,,1655537.9426,158635.8726,,
-2026-11-18,polymarket_title:WSH,Washington Wizards,polymarket_title,title,WSH,WSH,East,,,,,,,,,0.25,0.2,0.3,,1152765.5637,333878.8235,,
+2026-11-18,kalshi_title:UTAH,Utah Jazz,kalshi_title,title,UTAH,UTAH,West,,,,,,,,,1,0,1,1,,,811373.38,798803.44
+2026-11-18,kalshi_title:WSH,Washington Wizards,kalshi_title,title,WSH,WSH,East,,,,,,,,,1,0,1,1,,,1289487.75,1241879.75
+2026-11-18,polymarket_mvp:alperen-sengun,Alperen Sengun,polymarket_mvp,mvp,alperen-sengun,,,,,,,,,,,0.35,0.3,0.4,,14390.2772,14951.3725,,
+2026-11-18,polymarket_mvp:anthony-davis,Anthony Davis,polymarket_mvp,mvp,anthony-davis,,,,,,,,,,,0.15,0.1,0.2,,8250.755,18434.3469,,
+2026-11-18,polymarket_mvp:anthony-edwards,Anthony Edwards,polymarket_mvp,mvp,anthony-edwards,,,,,,,,,,,0.35,0.3,0.4,,41484.5919,20108.3865,,
+2026-11-18,polymarket_mvp:austin-reaves,Austin Reaves,polymarket_mvp,mvp,austin-reaves,,,,,,,,,,,0.05,,0.1,,100.87,18495.0453,,
+2026-11-18,polymarket_mvp:bam-adebayo,Bam Adebayo,polymarket_mvp,mvp,bam-adebayo,,,,,,,,,,,0.05,,0.1,,1263.671,11959.5954,,
+2026-11-18,polymarket_mvp:cade-cunningham,Cade Cunningham,polymarket_mvp,mvp,cade-cunningham,,,,,,,,,,,1.75,1.7,1.8,,18374.6022,20587.4714,,
+2026-11-18,polymarket_mvp:cooper-flagg,Cooper Flagg,polymarket_mvp,mvp,cooper-flagg,,,,,,,,,,,0.6,0.3,0.9,,13669.4565,20207.7052,,
+2026-11-18,polymarket_mvp:deni-avdija,Deni Avdija,polymarket_mvp,mvp,deni-avdija,,,,,,,,,,,0.35,0.3,0.4,,25978.8379,15115.2335,,
+2026-11-18,polymarket_mvp:devin-booker,Devin Booker,polymarket_mvp,mvp,devin-booker,,,,,,,,,,,0.05,,0.1,,6186.945,19926.2359,,
+2026-11-18,polymarket_mvp:donovan-mitchell,Donovan Mitchell,polymarket_mvp,mvp,donovan-mitchell,,,,,,,,,,,0.15,0.1,0.2,,11629.2299,21080.1371,,
+2026-11-18,polymarket_mvp:evan-mobley,Evan Mobley,polymarket_mvp,mvp,evan-mobley,,,,,,,,,,,0.05,,0.1,,1057.5,18598.7673,,
+2026-11-18,polymarket_mvp:giannis-antetokounmpo,Giannis Antetokounmpo,polymarket_mvp,mvp,giannis-antetokounmpo,,,,,,,,,,,1.55,1.5,1.6,,14190.5883,22070.845,,
+2026-11-18,polymarket_mvp:jalen-brunson,Jalen Brunson,polymarket_mvp,mvp,jalen-brunson,,,,,,,,,,,0.25,0.2,0.3,,14228.7982,12443.8531,,
+2026-11-18,polymarket_mvp:jalen-johnson,Jalen Johnson,polymarket_mvp,mvp,jalen-johnson,,,,,,,,,,,0.2,0.1,0.3,,12475.2935,18137.2473,,
+2026-11-18,polymarket_mvp:jamal-murray,Jamal Murray,polymarket_mvp,mvp,jamal-murray,,,,,,,,,,,0.05,,0.1,,140.4,19654.3083,,
+2026-11-18,polymarket_mvp:jaylen-brown,Jaylen Brown,polymarket_mvp,mvp,jaylen-brown,,,,,,,,,,,0.15,0.1,0.2,,15077.2721,18956.4246,,
+2026-11-18,polymarket_mvp:jayson-tatum,Jayson Tatum,polymarket_mvp,mvp,jayson-tatum,,,,,,,,,,,3.05,3,3.1,,17061.2023,15918.1118,,
+2026-11-18,polymarket_mvp:joel-embiid,Joel Embiid,polymarket_mvp,mvp,joel-embiid,,,,,,,,,,,0.05,,0.1,,1141.9386,18968.3578,,
+2026-11-18,polymarket_mvp:karl-anthony-towns,Karl-Anthony Towns,polymarket_mvp,mvp,karl-anthony-towns,,,,,,,,,,,0.05,,0.1,,1586.895,18297.6754,,
+2026-11-18,polymarket_mvp:kawhi-leonard,Kawhi Leonard,polymarket_mvp,mvp,kawhi-leonard,,,,,,,,,,,0.05,,0.1,,6625.3296,8876.0784,,
+2026-11-18,polymarket_mvp:kevin-durant,Kevin Durant,polymarket_mvp,mvp,kevin-durant,,,,,,,,,,,0.05,,0.1,,1968.1453,18460.4569,,
+2026-11-18,polymarket_mvp:lamelo-ball,LaMelo Ball,polymarket_mvp,mvp,lamelo-ball,,,,,,,,,,,0.05,,0.1,,129.2,19624.3601,,
+2026-11-18,polymarket_mvp:lebron-james,LeBron James,polymarket_mvp,mvp,lebron-james,,,,,,,,,,,0.05,,0.1,,4267.8197,20380.2813,,
+2026-11-18,polymarket_mvp:luka-doncic,Luka Doncic,polymarket_mvp,mvp,luka-doncic,,,,,,,,,,,40.25,39.1,41.4,,35791.7185,7294.0083,,
+2026-11-18,polymarket_mvp:nikola-jokic,Nikola Jokic,polymarket_mvp,mvp,nikola-jokic,,,,,,,,,,,4.5,4,5,,24703.4734,50279.0931,,
+2026-11-18,polymarket_mvp:paolo-banchero,Paolo Banchero,polymarket_mvp,mvp,paolo-banchero,,,,,,,,,,,0.05,,0.1,,6162.251,16238.2453,,
+2026-11-18,polymarket_mvp:scottie-barnes,Scottie Barnes,polymarket_mvp,mvp,scottie-barnes,,,,,,,,,,,0.1,,0.2,,7606.4295,18916.8154,,
+2026-11-18,polymarket_mvp:shai-gilgeous-alexander,Shai Gilgeous-Alexander,polymarket_mvp,mvp,shai-gilgeous-alexander,,,,,,,,,,,5.5,5,6,,19943.1264,48961.9076,,
+2026-11-18,polymarket_mvp:stephen-curry,Stephen Curry,polymarket_mvp,mvp,stephen-curry,,,,,,,,,,,0.65,0.6,0.7,,27416.1347,8239.737,,
+2026-11-18,polymarket_mvp:ty-jerome,Ty Jerome,polymarket_mvp,mvp,ty-jerome,,,,,,,,,,,0.05,,0.1,,4073.7563,9561.6672,,
+2026-11-18,polymarket_mvp:tyrese-haliburton,Tyrese Haliburton,polymarket_mvp,mvp,tyrese-haliburton,,,,,,,,,,,0.1,,0.2,,9812.88,15272.6206,,
+2026-11-18,polymarket_mvp:tyrese-maxey,Tyrese Maxey,polymarket_mvp,mvp,tyrese-maxey,,,,,,,,,,,1.15,1.1,1.2,,31811.2915,21842.5752,,
+2026-11-18,polymarket_mvp:victor-wembanyama,Victor Wembanyama,polymarket_mvp,mvp,victor-wembanyama,,,,,,,,,,,41.5,41,42,,38711.5521,11817.5005,,
+2026-11-18,polymarket_mvp:zion-williamson,Zion Williamson,polymarket_mvp,mvp,zion-williamson,,,,,,,,,,,0.05,,0.1,,157.4994,21161.2428,,
+2026-11-18,polymarket_roy:aday-mara,Aday Mara,polymarket_roy,roy,aday-mara,,,,,,,,,,,0.25,0.2,0.3,,22578.3464,9999.4269,,
+2026-11-18,polymarket_roy:aj-dybantsa,AJ Dybantsa,polymarket_roy,roy,aj-dybantsa,,,,,,,,,,,7.5,7,8,,38798.2169,15477.2292,,
+2026-11-18,polymarket_roy:alex-karaban,Alex Karaban,polymarket_roy,roy,alex-karaban,,,,,,,,,,,0.05,,0.1,,9921.922,6587.428,,
+2026-11-18,polymarket_roy:allen-graves,Allen Graves,polymarket_roy,roy,allen-graves,,,,,,,,,,,0.15,0.1,0.2,,676155.2735,13280.8527,,
+2026-11-18,polymarket_roy:bennett-stirtz,Bennett Stirtz,polymarket_roy,roy,bennett-stirtz,,,,,,,,,,,0.05,,0.1,,11210.9513,6317.1333,,
+2026-11-18,polymarket_roy:brayden-burries,Brayden Burries,polymarket_roy,roy,brayden-burries,,,,,,,,,,,0.25,0.2,0.3,,20863.1591,12428.1174,,
+2026-11-18,polymarket_roy:caleb-wilson,Caleb Wilson,polymarket_roy,roy,caleb-wilson,,,,,,,,,,,3.7,2.4,5,,47027.828,9037.9131,,
+2026-11-18,polymarket_roy:cameron-boozer,Cameron Boozer,polymarket_roy,roy,cameron-boozer,,,,,,,,,,,24.5,24,25,,37821.8977,5861.318,,
+2026-11-18,polymarket_roy:cameron-carr,Cameron Carr,polymarket_roy,roy,cameron-carr,,,,,,,,,,,0.05,,0.1,,12559.4204,5720.5571,,
+2026-11-18,polymarket_roy:chris-cenac-jr,Chris Cenac Jr.,polymarket_roy,roy,chris-cenac-jr,,,,,,,,,,,0.15,0.1,0.2,,487407.4735,11445.3257,,
+2026-11-18,polymarket_roy:christian-anderson,Christian Anderson,polymarket_roy,roy,christian-anderson,,,,,,,,,,,0.15,0.1,0.2,,383216.2329,10241.2297,,
+2026-11-18,polymarket_roy:dailyn-swain,Dailyn Swain,polymarket_roy,roy,dailyn-swain,,,,,,,,,,,0.05,,0.1,,3868.159,10152.479,,
+2026-11-18,polymarket_roy:darius-acuff-jr,Darius Acuff Jr.,polymarket_roy,roy,darius-acuff-jr,,,,,,,,,,,15,13,17,,38041.2332,6921.7061,,
+2026-11-18,polymarket_roy:darryn-peterson,Darryn Peterson,polymarket_roy,roy,darryn-peterson,,,,,,,,,,,7.05,6.3,7.8,,45759.9037,6059.8659,,
+2026-11-18,polymarket_roy:ebuka-okorie,Ebuka Okorie,polymarket_roy,roy,ebuka-okorie,,,,,,,,,,,0.15,0.1,0.2,,2623180.5623,10223.2506,,
+2026-11-18,polymarket_roy:hannes-steinbach,Hannes Steinbach,polymarket_roy,roy,hannes-steinbach,,,,,,,,,,,0.05,,0.1,,5439.862,8329.7493,,
+2026-11-18,polymarket_roy:jayden-quaintance,Jayden Quaintance,polymarket_roy,roy,jayden-quaintance,,,,,,,,,,,0.05,,0.1,,70342.5847,12208.4999,,
+2026-11-18,polymarket_roy:joshua-jefferson,Joshua Jefferson,polymarket_roy,roy,joshua-jefferson,,,,,,,,,,,0.05,,0.1,,82451.0532,13678.7675,,
+2026-11-18,polymarket_roy:karim-lopez,Karim López,polymarket_roy,roy,karim-lopez,,,,,,,,,,,0.05,,0.1,,7730.038,7029.5012,,
+2026-11-18,polymarket_roy:keaton-wagler,Keaton Wagler,polymarket_roy,roy,keaton-wagler,,,,,,,,,,,0.05,,0.1,,19812.4049,8441.0034,,
+2026-11-18,polymarket_roy:kingston-flemings,Kingston Flemings,polymarket_roy,roy,kingston-flemings,,,,,,,,,,,0.15,0.1,0.2,,300962.8712,6454.6058,,
+2026-11-18,polymarket_roy:koa-peat,Koa Peat,polymarket_roy,roy,koa-peat,,,,,,,,,,,0.05,,0.1,,8803.6988,6147.3743,,
+2026-11-18,polymarket_roy:labaron-philon-jr,Labaron Philon Jr.,polymarket_roy,roy,labaron-philon-jr,,,,,,,,,,,0.15,0.1,0.2,,331663.7269,5209.5817,,
+2026-11-18,polymarket_roy:mikel-brown-jr,Mikel Brown Jr.,polymarket_roy,roy,mikel-brown-jr,,,,,,,,,,,0.15,0.1,0.2,,14759.5051,11341.8671,,
+2026-11-18,polymarket_roy:morez-johnson-jr,Morez Johnson Jr.,polymarket_roy,roy,morez-johnson-jr,,,,,,,,,,,0.05,,0.1,,5741.6038,9145.9878,,
+2026-11-18,polymarket_roy:nate-ament,Nate Ament,polymarket_roy,roy,nate-ament,,,,,,,,,,,0.15,0.1,0.2,,13781.513,8574.8774,,
+2026-11-18,polymarket_roy:sergio-de-larrea,Sergio De Larrea,polymarket_roy,roy,sergio-de-larrea,,,,,,,,,,,0.25,0.2,0.3,,13696.7808,5140.9287,,
+2026-11-18,polymarket_roy:tarris-reed-jr,Tarris Reed Jr.,polymarket_roy,roy,tarris-reed-jr,,,,,,,,,,,0.15,0.1,0.2,,1821235.7815,12613.8704,,
+2026-11-18,polymarket_roy:yaxel-lendeborg,Yaxel Lendeborg,polymarket_roy,roy,yaxel-lendeborg,,,,,,,,,,,29.45,28.5,30.4,,50274.1906,5027.8445,,
+2026-11-18,polymarket_roy:zuby-ejiofor,Zuby Ejiofor,polymarket_roy,roy,zuby-ejiofor,,,,,,,,,,,0.15,0.1,0.2,,1081800.3631,11012.9459,,
+2026-11-18,polymarket_title:ATL,Atlanta Hawks,polymarket_title,title,ATL,ATL,East,,,,,,,,,0.95,0.9,1,,1413475.8947,160122.0002,,
+2026-11-18,polymarket_title:BKN,Brooklyn Nets,polymarket_title,title,BKN,BKN,East,,,,,,,,,0.05,,0.1,,1134027.7382,560782.5006,,
+2026-11-18,polymarket_title:BOS,Boston Celtics,polymarket_title,title,BOS,BOS,East,,,,,,,,,9.5,9,10,,1204245.3254,199346.013,,
+2026-11-18,polymarket_title:CHA,Charlotte Hornets,polymarket_title,title,CHA,CHA,East,,,,,,,,,0.15,0.1,0.2,,1234528.3883,294948.3439,,
+2026-11-18,polymarket_title:CHI,Chicago Bulls,polymarket_title,title,CHI,CHI,East,,,,,,,,,0.05,,0.1,,1059259.654,710515.5789,,
+2026-11-18,polymarket_title:CLE,Cleveland Cavaliers,polymarket_title,title,CLE,CLE,East,,,,,,,,,1.95,1.9,2,,1371025.6328,342649.1046,,
+2026-11-18,polymarket_title:DAL,Dallas Mavericks,polymarket_title,title,DAL,DAL,West,,,,,,,,,0.75,0.7,0.8,,1337718.0383,266554.3099,,
+2026-11-18,polymarket_title:DEN,Denver Nuggets,polymarket_title,title,DEN,DEN,West,,,,,,,,,2.7,2.6,2.8,,1340225.5684,300901.5851,,
+2026-11-18,polymarket_title:DET,Detroit Pistons,polymarket_title,title,DET,DET,East,,,,,,,,,3.65,3.6,3.7,,1322291.7746,179161.1347,,
+2026-11-18,polymarket_title:GS,Golden State Warriors,polymarket_title,title,GS,GS,West,,,,,,,,,1.95,1.9,2,,1970176.0301,214667.2638,,
+2026-11-18,polymarket_title:HOU,Houston Rockets,polymarket_title,title,HOU,HOU,West,,,,,,,,,5.35,5.3,5.4,,1626630.142,163947.2615,,
+2026-11-18,polymarket_title:IND,Indiana Pacers,polymarket_title,title,IND,IND,East,,,,,,,,,1.35,1.3,1.4,,1254625.4442,146877.2879,,
+2026-11-18,polymarket_title:LAC,LA Clippers,polymarket_title,title,LAC,LAC,West,,,,,,,,,0.05,,0.1,,1013804.8109,624836.9652,,
+2026-11-18,polymarket_title:LAL,Los Angeles Lakers,polymarket_title,title,LAL,LAL,West,,,,,,,,,5.75,5.7,5.8,,1516886.4748,179137.8485,,
+2026-11-18,polymarket_title:MEM,Memphis Grizzlies,polymarket_title,title,MEM,MEM,West,,,,,,,,,0.65,0.6,0.7,,1235525.641,475713.524,,
+2026-11-18,polymarket_title:MIA,Miami Heat,polymarket_title,title,MIA,MIA,East,,,,,,,,,2.55,2.5,2.6,,1324863.2876,194983.6264,,
+2026-11-18,polymarket_title:MIL,Milwaukee Bucks,polymarket_title,title,MIL,MIL,East,,,,,,,,,0.05,,0.1,,793045.6415,752801.3522,,
+2026-11-18,polymarket_title:MIN,Minnesota Timberwolves,polymarket_title,title,MIN,MIN,West,,,,,,,,,6.25,6.2,6.3,,1316784.4705,206758.4581,,
+2026-11-18,polymarket_title:NO,New Orleans Pelicans,polymarket_title,title,NO,NO,West,,,,,,,,,0.05,,0.1,,1240786.7645,255804.6443,,
+2026-11-18,polymarket_title:NY,New York Knicks,polymarket_title,title,NY,NY,East,,,,,,,,,8.5,8,9,,1224142.6483,262395.4732,,
+2026-11-18,polymarket_title:OKC,Oklahoma City Thunder,polymarket_title,title,OKC,OKC,West,,,,,,,,,13.5,13,14,,1435994.7393,247955.8367,,
+2026-11-18,polymarket_title:ORL,Orlando Magic,polymarket_title,title,ORL,ORL,East,,,,,,,,,0.55,0.5,0.6,,1423275.1251,257951.7578,,
+2026-11-18,polymarket_title:PHI,Philadelphia 76ers,polymarket_title,title,PHI,PHI,East,,,,,,,,,9.35,9.3,9.4,,2038791.133,150505.2803,,
+2026-11-18,polymarket_title:PHX,Phoenix Suns,polymarket_title,title,PHX,PHX,West,,,,,,,,,0.25,0.2,0.3,,1372638.6897,221653.7954,,
+2026-11-18,polymarket_title:POR,Portland Trail Blazers,polymarket_title,title,POR,POR,West,,,,,,,,,2.85,2.8,2.9,,1519931.5042,131143.724,,
+2026-11-18,polymarket_title:SA,San Antonio Spurs,polymarket_title,title,SA,SA,West,,,,,,,,,22.5,22,23,,1208690.4883,166121.1907,,
+2026-11-18,polymarket_title:SAC,Sacramento Kings,polymarket_title,title,SAC,SAC,West,,,,,,,,,0.05,,0.1,,798079.4643,761994.9356,,
+2026-11-18,polymarket_title:TOR,Toronto Raptors,polymarket_title,title,TOR,TOR,East,,,,,,,,,3.15,3.1,3.2,,1313813.5846,146103.8876,,
+2026-11-18,polymarket_title:UTAH,Utah Jazz,polymarket_title,title,UTAH,UTAH,West,,,,,,,,,0.35,0.3,0.4,,1655977.9426,158680.6976,,
+2026-11-18,polymarket_title:WSH,Washington Wizards,polymarket_title,title,WSH,WSH,East,,,,,,,,,0.25,0.2,0.3,,1153538.8971,340433.7714,,
