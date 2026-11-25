@@ -1,9 +1,11 @@
 {
-  "run_time": "2026-11-25T15:35:34Z",
+  "run_time": "2026-11-25T22:34:13Z",
   "first_run_date": "2026-11-16",
   "days_with_success": 10,
-  "items": 224,
-  "new_today": [],
+  "items": 225,
+  "new_today": [
+    "kalshi_roy:meleek-thomas"
+  ],
   "gone_today": [],
   "sources": [
     {
@@ -19,7 +21,7 @@
     {
       "name": "kalshi_roy",
       "ok": true,
-      "count": 17
+      "count": 18
     },
     {
       "name": "kalshi_title",
